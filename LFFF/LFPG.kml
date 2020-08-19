@@ -2,7 +2,6 @@
 <kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
 <Document>
 	<name>LFPG</name>
-	<open>1</open>
 	<Style id="sh_ylw-pushpin200">
 		<IconStyle>
 			<scale>1.3</scale>
@@ -16,6 +15,23 @@
 		</LineStyle>
 		<PolyStyle>
 			<color>540055ff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>705b5e59</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>5400ff00</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sh_ylw-pushpin120">
@@ -169,6 +185,16 @@
 			<color>6600ff00</color>
 		</PolyStyle>
 	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin3</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
 	<Style id="s_ylw-pushpin_hl">
 		<IconStyle>
 			<scale>1.3</scale>
@@ -218,19 +244,17 @@
 			<color>ff00a0cc</color>
 		</LineStyle>
 	</Style>
-	<Style id="s_ylw-pushpin">
-		<IconStyle>
-			<scale>1.1</scale>
-			<Icon>
-				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
-			</Icon>
-			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
-		</IconStyle>
-		<LineStyle>
-			<color>ff00a0cc</color>
-		</LineStyle>
-	</Style>
-	<Style id="sh_ylw-pushpin">
+	<StyleMap id="msn_ylw-pushpin0">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin3</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin1">
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
@@ -246,6 +270,18 @@
 		<PolyStyle>
 			<color>540055ff</color>
 		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff00a0cc</color>
+		</LineStyle>
 	</Style>
 	<Style id="sn_ylw-pushpin2">
 		<IconStyle>
@@ -285,6 +321,23 @@
 			<styleUrl>#sh_ylw-pushpin120</styleUrl>
 		</Pair>
 	</StyleMap>
+	<Style id="sn_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>705b5e59</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>5400ff00</color>
+		</PolyStyle>
+	</Style>
 	<StyleMap id="m_ylw-pushpin">
 		<Pair>
 			<key>normal</key>
@@ -325,17 +378,17 @@
 			<styleUrl>#sh_ylw-pushpin20000</styleUrl>
 		</Pair>
 	</StyleMap>
-	<StyleMap id="msn_ylw-pushpin">
+	<StyleMap id="msn_ylw-pushpin2">
 		<Pair>
 			<key>normal</key>
 			<styleUrl>#sn_ylw-pushpin0</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin</styleUrl>
+			<styleUrl>#sh_ylw-pushpin1</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Style id="sh_ylw-pushpin1">
+	<Style id="sh_ylw-pushpin2">
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
@@ -398,6 +451,23 @@
 			<styleUrl>#__managed_style_274BD99EB915336CB9FB</styleUrl>
 		</Pair>
 	</StyleMap>
+	<Style id="sn_ylw-pushpin4">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>705b5e59</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>54ffaaaa</color>
+		</PolyStyle>
+	</Style>
 	<Style id="failed0">
 		<PolyStyle>
 			<color>80005500</color>
@@ -428,24 +498,24 @@
 			<styleUrl>#sh_ylw-pushpin10</styleUrl>
 		</Pair>
 	</StyleMap>
-	<StyleMap id="msn_ylw-pushpin0">
+	<StyleMap id="msn_ylw-pushpin3">
 		<Pair>
 			<key>normal</key>
 			<styleUrl>#sn_ylw-pushpin</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin1</styleUrl>
+			<styleUrl>#sh_ylw-pushpin2</styleUrl>
 		</Pair>
 	</StyleMap>
-	<StyleMap id="msn_ylw-pushpin2">
+	<StyleMap id="msn_ylw-pushpin20">
 		<Pair>
 			<key>normal</key>
 			<styleUrl>#sn_ylw-pushpin22</styleUrl>
 		</Pair>
 		<Pair>
 			<key>highlight</key>
-			<styleUrl>#sh_ylw-pushpin2</styleUrl>
+			<styleUrl>#sh_ylw-pushpin20</styleUrl>
 		</Pair>
 	</StyleMap>
 	<Style id="sn_ylw-pushpin7000">
@@ -461,6 +531,23 @@
 		</LineStyle>
 		<PolyStyle>
 			<color>6600ff00</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin3">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>705b5e59</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>54ffaaaa</color>
 		</PolyStyle>
 	</Style>
 	<Style id="sn_ylw-pushpin710">
@@ -513,7 +600,7 @@
 			<styleUrl>#sh_ylw-pushpin2000</styleUrl>
 		</Pair>
 	</StyleMap>
-	<Style id="sh_ylw-pushpin2">
+	<Style id="sh_ylw-pushpin20">
 		<IconStyle>
 			<scale>1.3</scale>
 			<Icon>
@@ -877,7 +964,7 @@
 				</Placemark>
 				<Placemark>
 					<name>@concrete1_C-U</name>
-					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<styleUrl>#msn_ylw-pushpin3</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -898,6 +985,20 @@
 							<LinearRing>
 								<coordinates>
 									2.55573651519982,49.00005280700569,0 2.556441373035339,48.99988773448552,0 2.556405386789975,48.99994784768911,0 2.556354963978649,48.99999711663304,0 2.556324786245696,49.00002105845252,0 2.556280100127231,49.0000479003179,0 2.556232073383349,49.00007434985906,0 2.55618127454875,49.00009826745208,0 2.55611602234449,49.00011162882296,0 2.556075912272446,49.00012088894256,0 2.556016324683084,49.00012577687387,0 2.555915254384653,49.00011699178911,0 2.555848937396912,49.00009402499755,0 2.555792860199946,49.00007225073546,0 2.55573651519982,49.00005280700569,0 
+								</coordinates>
+							</LinearRing>
+						</outerBoundaryIs>
+					</Polygon>
+				</Placemark>
+				<Placemark>
+					<name>@concrete_DEICE_SOUTH_EST</name>
+					<styleUrl>#msn_ylw-pushpin0</styleUrl>
+					<Polygon>
+						<tessellate>1</tessellate>
+						<outerBoundaryIs>
+							<LinearRing>
+								<coordinates>
+									2.547915525819695,48.99813328336471,0 2.54768449073653,48.99768090702196,0 2.547555646068116,48.99764834482237,0 2.547645025240599,48.99747370501277,0 2.547727026298543,48.99736809891896,0 2.547817624300464,48.99726797881958,0 2.547945038169579,48.99731283834421,0 2.548808662470572,48.99726139455861,0 2.549031390350271,48.99719767553564,0 2.549190223169948,48.99743016687235,0 2.549203634126194,48.99749894880706,0 2.54923658547916,48.99779202987657,0 2.549405075842641,48.99776043957121,0 2.549448096476017,48.99765430433533,0 2.54952095070017,48.99762428389585,0 2.550036442865984,48.99768244288402,0 2.550616934030681,48.99741364873231,0 2.551117522244122,48.99747784890729,0 2.55131817391578,48.99776301088676,0 2.551400269928588,48.99777988766387,0 2.551969251855521,48.99776534396462,0 2.552517325903727,48.99751729198124,0 2.553002860781111,48.99756914084852,0 2.553174154685252,48.99778357085741,0 2.55392437591613,48.99782733617521,0 2.554346106332419,48.99764150247339,0 2.554985860718406,48.99764721990763,0 2.555285663984499,48.998040091181,0 2.555704138038288,48.99802483670589,0 2.555450108568709,48.99846095033907,0 2.555347276006843,48.99849457783088,0 2.555193945343937,48.99852613638947,0 2.555062333039881,48.99853289981262,0 2.553910439642895,48.9984699549925,0 2.552599507367082,48.9984001693109,0 2.551917012854297,48.99835448297253,0 2.550686966051743,48.99827551851312,0 2.54855588410803,48.99817293608171,0 2.547915525819695,48.99813328336471,0 
 								</coordinates>
 							</LinearRing>
 						</outerBoundaryIs>
@@ -1539,7 +1640,6 @@
 			</Folder>
 			<Folder id="0F697EF8F015334C51C2">
 				<name>TWY</name>
-				<open>1</open>
 				<styleUrl>#__managed_style_0960186D6615336CB9FB</styleUrl>
 				<Placemark id="0CD118630915336C8A6A">
 					<name>@taxi_TWY_A</name>
@@ -1836,7 +1936,7 @@
 				</Placemark>
 				<Placemark id="02E60B73EA15336C8C16">
 					<name>@taxi_TWY_N</name>
-					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<styleUrl>#msn_ylw-pushpin2</styleUrl>
 					<Polygon>
 						<outerBoundaryIs>
 							<LinearRing>
@@ -1877,7 +1977,7 @@
 				</Placemark>
 				<Placemark id="0C6233F3DF15336C8C1C">
 					<name>@taxi_TWY_P_OUEST</name>
-					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<styleUrl>#msn_ylw-pushpin2</styleUrl>
 					<Polygon>
 						<outerBoundaryIs>
 							<LinearRing>
@@ -1960,7 +2060,7 @@
 				</Placemark>
 				<Placemark id="0D4CA6064F15336C8C34">
 					<name>@taxi_TWY_T</name>
-					<styleUrl>#msn_ylw-pushpin</styleUrl>
+					<styleUrl>#msn_ylw-pushpin2</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -2046,7 +2146,7 @@
 				<name>RWY</name>
 				<Placemark>
 					<name>@rwy_RWY_26_L</name>
-					<styleUrl>#msn_ylw-pushpin2</styleUrl>
+					<styleUrl>#msn_ylw-pushpin20</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -2060,7 +2160,7 @@
 				</Placemark>
 				<Placemark>
 					<name>@rwy_RWY_26_R</name>
-					<styleUrl>#msn_ylw-pushpin2</styleUrl>
+					<styleUrl>#msn_ylw-pushpin20</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -2074,7 +2174,7 @@
 				</Placemark>
 				<Placemark>
 					<name>@rwy_RWY_27R</name>
-					<styleUrl>#msn_ylw-pushpin2</styleUrl>
+					<styleUrl>#msn_ylw-pushpin20</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -2088,7 +2188,7 @@
 				</Placemark>
 				<Placemark>
 					<name>@rwy_RWY_27_L</name>
-					<styleUrl>#msn_ylw-pushpin2</styleUrl>
+					<styleUrl>#msn_ylw-pushpin20</styleUrl>
 					<Polygon>
 						<tessellate>1</tessellate>
 						<outerBoundaryIs>
@@ -2442,6 +2542,7 @@
 			</Folder>
 			<Folder id="0B639D3C1315334C51C3">
 				<name>Building</name>
+				<open>1</open>
 				<Folder id="0ACF841718153359DFF6">
 					<name>Terminaux</name>
 					<open>1</open>
@@ -2952,7 +3053,6 @@
 				</Folder>
 				<Folder id="0B8FAD6355153359E15C">
 					<name>TGV</name>
-					<open>1</open>
 					<Placemark>
 						<name>BDG_TGV_5</name>
 						<styleUrl>#msn_ylw-pushpin200</styleUrl>
@@ -3026,7 +3126,6 @@
 				</Folder>
 				<Folder id="126B75B4AD153359E15C">
 					<name>TWR</name>
-					<open>1</open>
 					<Placemark>
 						<name>TWR_TRAFFIC</name>
 						<styleUrl>#msn_ylw-pushpin200</styleUrl>
@@ -3376,6 +3475,34 @@
 								<LinearRing>
 									<coordinates>
 										2.569705325638858,49.00394366525081,0 2.569803777482655,49.00392665506898,0 2.569871950915335,49.00391310841943,0 2.569968474458693,49.0039031613977,0 2.570036015200752,49.00389476329851,0 2.57011275969635,49.00388843902859,0 2.570190657089146,49.00388305213467,0 2.570287379147989,49.00387946608639,0 2.570387457656729,49.0038791961158,0 2.570488497592287,49.00388314444955,0 2.570600166510459,49.00388149680772,0 2.570748190247727,49.00388675764524,0 2.570931493366011,49.00389862815772,0 2.571055932803426,49.00390542920198,0 2.571185602801185,49.00391413283821,0 2.571307142671133,49.00392494611461,0 2.571454612823643,49.00394052285713,0 2.571537956995786,49.0039519047007,0 2.571630167640646,49.00396107020883,0 2.571712450106147,49.00397242813358,0 2.571793077011459,49.00399195796819,0 2.571873342842521,49.0040047128806,0 2.571951722311356,49.00402495855354,0 2.57203621865306,49.00404286558021,0 2.572138506711144,49.00407862797838,0 2.572069572440072,49.00408751790022,0 2.572026146683661,49.00409812108859,0 2.571980114387107,49.00410546160109,0 2.571943318238719,49.00411201988387,0 2.571897124999645,49.00412077360551,0 2.571856560620549,49.0041191424295,0 2.571825596711312,49.00412777856575,0 2.571765964844328,49.00412844283633,0 2.571687167230774,49.00413559235367,0 2.571624791837184,49.00413776466488,0 2.571580489209677,49.00414529129029,0 2.571534158161579,49.00414569917433,0 2.571476774534989,49.00414724826312,0 2.571420336908876,49.00414168465702,0 2.571357415921836,49.00414443621099,0 2.571282741566476,49.00414213805787,0 2.571200977343484,49.00413988796579,0 2.571116868285506,49.00413446912843,0 2.571018793734845,49.00413335407435,0 2.570941204329744,49.00412884312566,0 2.570841134957296,49.00412556374659,0 2.570744372807543,49.00411447666427,0 2.570655553520918,49.00411111330636,0 2.57057519557468,49.00410574251067,0 2.570525973538733,49.00410450810421,0 2.570445925709388,49.0040960300929,0 2.570365120436335,49.00408950681229,0 2.570299959724569,49.00408097901917,0 2.570230989170841,49.00407441377737,0 2.570169919199741,49.00406272571852,0 2.570121806997139,49.00405312688595,0 2.570058837046865,49.00404449648731,0 2.570007374002059,49.00403488534253,0 2.569960800435895,49.00402424328618,0 2.569913634279215,49.0040116110716,0 2.569865747119318,49.00399659570768,0 2.569820439027379,49.00398155734142,0 2.569774746735709,49.00397154458002,0 2.569705325638858,49.00394366525081,0 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>BDG_DEICE_5</name>
+						<styleUrl>#msn_ylw-pushpin</styleUrl>
+						<Polygon>
+							<tessellate>1</tessellate>
+							<outerBoundaryIs>
+								<LinearRing>
+									<coordinates>
+										2.553352673919487,48.99795044659154,0 2.553427348066193,48.997917551655,0 2.553514371483965,48.9979257727281,0 2.553567814081972,48.99797479259283,0 2.553545445413774,48.99803151206824,0 2.553475505237464,48.9980646477067,0 2.553382667323767,48.99805407643001,0 2.553336459009412,48.99800235226633,0 2.553352673919487,48.99795044659154,0 
+									</coordinates>
+								</LinearRing>
+							</outerBoundaryIs>
+						</Polygon>
+					</Placemark>
+					<Placemark>
+						<name>BDG_DEICE_4</name>
+						<styleUrl>#msn_ylw-pushpin</styleUrl>
+						<Polygon>
+							<tessellate>1</tessellate>
+							<outerBoundaryIs>
+								<LinearRing>
+									<coordinates>
+										2.54964952639686,48.99772806641812,0 2.549703406249439,48.99773343984236,0 2.549740515707606,48.99776625001476,0 2.549730013719567,48.9978038741715,0 2.54966712623091,48.99783287537586,0 2.54961726616951,48.99782664716479,0 2.549588006492789,48.99778730751504,0 2.549598013632886,48.99774942905231,0 2.54964952639686,48.99772806641812,0 
 									</coordinates>
 								</LinearRing>
 							</outerBoundaryIs>
