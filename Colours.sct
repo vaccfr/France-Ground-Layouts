@@ -14,7 +14,7 @@
 #define COLOR_AoRcenter1  6579300
 #define COLOR_AoRcenter2     8514
 #define COLOR_AoRcenter3  8289918
-#define COLOR_AoRcenter4  8289918
+#define COLOR_AoRcenter4  4276545
 #define COLOR_AoRcenter5  8289918
 #define COLOR_AoRdeparture1    32896
 #define COLOR_AoRdeparture2  8289918
@@ -31,7 +31,7 @@
 #define COLOR_GrasSurface  3100928
 #define COLOR_GrasSurface2  3156512
 #define COLOR_GrasSurface3  3156512
-#define COLOR_GrasSurface4  3156512
+#define COLOR_GrasSurface4  2829085
 #define COLOR_HardSurface1  9671574
 #define COLOR_HardSurface2  5987929
 #define COLOR_HardSurface3  8355978
@@ -56,7 +56,7 @@
 #define COLOR_Releaseline    32768
 #define COLOR_RestrictedArea      128
 #define COLOR_RunwayBorder  8421504
-#define COLOR_RunwayConcrete  4013373
+#define COLOR_RunwayConcrete  5592405
 #define COLOR_RunwayGrass    32768
 #define COLOR_SID       16711680
 #define COLOR_STAR      16711680
@@ -83,5 +83,5 @@
 #define COLOR_Terrain9     12900
 #define COLOR_UpperSector     8514
 #define COLOR_VFR-Route        0
-#define COLOR_Vectors    5659976
+#define COLOR_Vectors    5135955
 #define COLOR_Water      8404992
