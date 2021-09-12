@@ -11,10 +11,25 @@
 
 # Standard de design
 
-- Un rectangle doit être définie en fond de carte qui couvre toute la platforme, plus une marge de 10nm de chaque coté. La couleur de cette zone est COLOR_GrasSurface4
+# Consignes générales
+
+
+- Le moins de points possible doit être utilisé, afin de conserver les performances d'EuroScope, tout en conservant une niveau de précision suffisant (courbes lisses etc...).
+- Ne doivent être dessinées que les zones "roulables". Par conséquent, les accotements ne seront pas dessinées en tant qu'apron, taxiway ou piste.
+- Afin d'optimiser le nombre de polygone, la superposition des différents polygones sera priviliégiée.
+
+# Couleurs
+
+- Un rectangle doit être définie en fond de carte qui couvre toute la platforme, plus une marge suffisante de chaque coté pour que ses limites ne soit pas visibles lors d'un zoom normal sur l'AVISO. La couleur de cette zone est COLOR_GrasSurface4
 - Les pistes doivent être définies en polygones à part, couleur COLOR_RunwayConcrete
-- Les taxiways doivent être définies en polygones à part, couleur COLOR_HardSurface1
-- Les aprons doivent être définis en polygones à part, couleur COLOR_HardSurface2
+- Les taxiways doivent être définies en polygones à part, couleur COLOR_HardSurface2
+- Les aprons doivent être définis en polygones à part, couleur COLOR_HardSurface3
 - Les zones d'herbes doivent être définies en polygones à part, couleur COLOR_GrasSurface
 - Les batiments doivent être définis en polygones à part, couleur COLOR_Building
-- Le moins de points possible doit être utilisé, afin de conserver les performances d'EuroScope
+- Les points d'attente CAT I doivent être définis en polygones à part, couleur COLOR_ProhibitedArea
+- Les points d'attente CAT III doivent être définis en polygones à part, couleur COLOR_DangerArea
+- Les zones désafectées doivent être définies en polygones à part, couleur COLOR_HardSurface4
+- Les zones chevrons doivent être définies en polygones à part, couleur COLOR_HardSurface4
+- Les lignes médianes des portes doivent être définis en 'path' (rubrique [GEO]) à part, couleur COLOR_Taxiway
+
+Pour toute quesion ou problème en rapport avec la création d'un AVISO, rendez vous directement sur le Discord de French vACC.
