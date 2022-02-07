@@ -22,12 +22,13 @@
 
 - Un rectangle doit être définie en fond de carte qui couvre toute la platforme, plus une marge suffisante de chaque coté pour que ses limites ne soit pas visibles lors d'un zoom normal sur l'AVISO. La couleur de cette zone est COLOR_GrasSurface4
 - Les pistes doivent être définies en polygones à part, couleur COLOR_RunwayConcrete
+- Les pistes en herbes doivent être définies en polygone à part, couleur COLOR_GrassRunway
 - Les taxiways doivent être définies en polygones à part, couleur COLOR_HardSurface2
 - Les aprons doivent être définis en polygones à part, couleur COLOR_HardSurface3
 - Les zones d'herbes doivent être définies en polygones à part, couleur COLOR_GrasSurface
 - Les batiments doivent être définis en polygones à part, couleur COLOR_Building
 - Les points d'attente CAT I doivent être définis en polygones à part, couleur COLOR_ProhibitedArea
-- Les points d'attente CAT III doivent être définis en polygones à part, couleur COLOR_DangerArea
+- Les points d'attente CAT III doivent être définis en polygones à part, couleur COLOR_TaxiwayOrange
 - Les zones désafectées doivent être définies en polygones à part, couleur COLOR_HardSurface4
 - Les zones chevrons doivent être définies en polygones à part, couleur COLOR_HardSurface4
 - Les lignes médianes des portes doivent être définis en 'path' (rubrique [GEO]) à part, couleur COLOR_Taxiway
