@@ -1,0 +1,149 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\Pierre\AppData\Roaming\EuroScope\LFXX.sct
+SECTORTITLE:LFXX.sct
+Free Text:LFCR Gates\1:freetext
+Free Text:LFCR Gates\2:freetext
+Free Text:LFCR Gates\3:freetext
+Free Text:LFCR Gates\4:freetext
+Free Text:LFCR Gates\5:freetext
+Free Text:LFCR Gates\7:freetext
+Free Text:LFCR Gates\8:freetext
+Free Text:LFCR Gates\9:freetext
+Free Text:LFCR Gates\AVT:freetext
+Free Text:LFCR Gates\Hangar:freetext
+Free Text:LFCR Gates\TWR:freetext
+Free Text:LFCR Gates\Terminal:freetext
+Free Text:LFCR Points VFR\E:freetext
+Free Text:LFCR Points VFR\EA:freetext
+Free Text:LFCR Points VFR\N:freetext
+Free Text:LFCR Points VFR\S:freetext
+Free Text:LFCR Points VFR\SA:freetext
+Free Text:LFCR Points VFR\W:freetext
+Free Text:LFCR Taxiways\A1:freetext
+Free Text:LFCR Taxiways\A2:freetext
+Free Text:LFCR Taxiways\A3:freetext
+Free Text:LFCR Taxiways\C:freetext
+Free Text:LFLS Gates\A10:freetext
+Free Text:LFLS Gates\A12:freetext
+Free Text:LFLS Gates\A2:freetext
+Free Text:LFLS Gates\A21:freetext
+Free Text:LFLS Gates\A3:freetext
+Free Text:LFLS Gates\A4:freetext
+Free Text:LFLS Gates\A5:freetext
+Free Text:LFLS Gates\A6:freetext
+Free Text:LFLS Gates\A7:freetext
+Free Text:LFLS Gates\A8:freetext
+Free Text:LFLS Gates\ACD CEP:freetext
+Free Text:LFLS Gates\Apron E:freetext
+Free Text:LFLS Gates\Apron J:freetext
+Free Text:LFLS Gates\B1:freetext
+Free Text:LFLS Gates\B2:freetext
+Free Text:LFLS Gates\B3:freetext
+Free Text:LFLS Gates\C1:freetext
+Free Text:LFLS Gates\C11:freetext
+Free Text:LFLS Gates\C2:freetext
+Free Text:LFLS Gates\C21:freetext
+Free Text:LFLS Gates\C22:freetext
+Free Text:LFLS Gates\C3:freetext
+Free Text:LFLS Gates\C4:freetext
+Free Text:LFLS Gates\C5:freetext
+Free Text:LFLS Gates\C6:freetext
+Free Text:LFLS Gates\C7:freetext
+Free Text:LFLS Gates\D1:freetext
+Free Text:LFLS Gates\D2:freetext
+Free Text:LFLS Gates\D3:freetext
+Free Text:LFLS Gates\D4:freetext
+Free Text:LFLS Gates\D5:freetext
+Free Text:LFLS Gates\Feu:freetext
+Free Text:LFLS Gates\GA Buisiness Terminal:freetext
+Free Text:LFLS Gates\Hangar:freetext
+Free Text:LFLS Gates\TWR:freetext
+Free Text:LFLS Gates\Terminal:freetext
+Free Text:LFLS Points VFR\N:freetext
+Free Text:LFLS Points VFR\NE:freetext
+Free Text:LFLS Points VFR\NW:freetext
+Free Text:LFLS Points VFR\S:freetext
+Free Text:LFLS Points VFR\SE:freetext
+Free Text:LFLS Points VFR\W:freetext
+Free Text:LFLS Taxiways\N6:freetext
+Free Text:LFLS Taxiways\N7:freetext
+Free Text:LFLS Taxiways\S1:freetext
+Free Text:LFLS Taxiways\S2:freetext
+Free Text:LFLS Taxiways\S3:freetext
+Free Text:LFLS Taxiways\S4:freetext
+Free Text:LFLS Taxiways\S5:freetext
+Free Text:LFLS Taxiways\T1:freetext
+Free Text:LFLS Taxiways\T2:freetext
+Free Text:LFLS Taxiways\T3:freetext
+Free Text:LFLS Taxiways\T4:freetext
+Free Text:LFLS Taxiways\T5:freetext
+Free Text:LFLS Taxiways\TL:freetext
+Geo:LFCR Groundlayout AVISO:
+Geo:LFLS Groundlayout AVISO:
+Regions:LFLS AVISO:polygon
+Runways:LFCR 13-31:centerline
+Runways:LFCR 13-31:extended centerline 1
+Runways:LFCR 13-31:extended centerline 1 left base
+Runways:LFCR 13-31:extended centerline 1 left ticks
+Runways:LFCR 13-31:extended centerline 1 left vectoring
+Runways:LFCR 13-31:extended centerline 1 right base
+Runways:LFCR 13-31:extended centerline 1 right ticks
+Runways:LFCR 13-31:extended centerline 1 right vectoring
+Runways:LFCR 13-31:extended centerline 2
+Runways:LFCR 13-31:extended centerline 2 left base
+Runways:LFCR 13-31:extended centerline 2 left ticks
+Runways:LFCR 13-31:extended centerline 2 left vectoring
+Runways:LFCR 13-31:extended centerline 2 right base
+Runways:LFCR 13-31:extended centerline 2 right ticks
+Runways:LFCR 13-31:extended centerline 2 right vectoring
+Runways:LFCR 13-31:name
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:0
+TURNLEADER:0
+HISTORY_DOTS:0
+SIMULATION_MODE:4
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:CoFrance
+WINDOWAREA:45.357168:5.325657:45.365269:5.349520
+PLUGIN:CoFrance:APP:1
+PLUGIN:CoFrance:FILT:0
+PLUGIN:CoFrance:FILTABOVE:99999
+PLUGIN:CoFrance:FILTBELOW:0
+PLUGIN:CoFrance:RAD:0
+PLUGIN:CoFrance:VV:0
+PLUGIN:CoFrance:VVTIME:2
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFLS
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:303
+PLUGIN:vSMR:SRW1BottomRightY:734
+PLUGIN:vSMR:SRW1Display:0
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:12
+PLUGIN:vSMR:SRW1OffsetY:103
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:0
+PLUGIN:vSMR:SRW1TopLeftY:472
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200
