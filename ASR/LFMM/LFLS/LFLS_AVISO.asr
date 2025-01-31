@@ -3,28 +3,6 @@ DisplayTypeNeedRadarContent:0
 DisplayTypeGeoReferenced:1
 SECTORFILE:C:\Users\Pierre\AppData\Roaming\EuroScope\LFXX.sct
 SECTORTITLE:LFXX.sct
-Free Text:LFCR Gates\1:freetext
-Free Text:LFCR Gates\2:freetext
-Free Text:LFCR Gates\3:freetext
-Free Text:LFCR Gates\4:freetext
-Free Text:LFCR Gates\5:freetext
-Free Text:LFCR Gates\7:freetext
-Free Text:LFCR Gates\8:freetext
-Free Text:LFCR Gates\9:freetext
-Free Text:LFCR Gates\AVT:freetext
-Free Text:LFCR Gates\Hangar:freetext
-Free Text:LFCR Gates\TWR:freetext
-Free Text:LFCR Gates\Terminal:freetext
-Free Text:LFCR Points VFR\E:freetext
-Free Text:LFCR Points VFR\EA:freetext
-Free Text:LFCR Points VFR\N:freetext
-Free Text:LFCR Points VFR\S:freetext
-Free Text:LFCR Points VFR\SA:freetext
-Free Text:LFCR Points VFR\W:freetext
-Free Text:LFCR Taxiways\A1:freetext
-Free Text:LFCR Taxiways\A2:freetext
-Free Text:LFCR Taxiways\A3:freetext
-Free Text:LFCR Taxiways\C:freetext
 Free Text:LFLS Gates\A10:freetext
 Free Text:LFLS Gates\A12:freetext
 Free Text:LFLS Gates\A2:freetext
@@ -80,25 +58,10 @@ Free Text:LFLS Taxiways\T3:freetext
 Free Text:LFLS Taxiways\T4:freetext
 Free Text:LFLS Taxiways\T5:freetext
 Free Text:LFLS Taxiways\TL:freetext
-Geo:LFCR Groundlayout AVISO:
 Geo:LFLS Groundlayout AVISO:
 Regions:LFLS AVISO:polygon
-Runways:LFCR 13-31:centerline
-Runways:LFCR 13-31:extended centerline 1
-Runways:LFCR 13-31:extended centerline 1 left base
-Runways:LFCR 13-31:extended centerline 1 left ticks
-Runways:LFCR 13-31:extended centerline 1 left vectoring
-Runways:LFCR 13-31:extended centerline 1 right base
-Runways:LFCR 13-31:extended centerline 1 right ticks
-Runways:LFCR 13-31:extended centerline 1 right vectoring
-Runways:LFCR 13-31:extended centerline 2
-Runways:LFCR 13-31:extended centerline 2 left base
-Runways:LFCR 13-31:extended centerline 2 left ticks
-Runways:LFCR 13-31:extended centerline 2 left vectoring
-Runways:LFCR 13-31:extended centerline 2 right base
-Runways:LFCR 13-31:extended centerline 2 right ticks
-Runways:LFCR 13-31:extended centerline 2 right vectoring
-Runways:LFCR 13-31:name
+Runways:LFLS 09-27:centerline
+Runways:LFLS 09-27:name
 SHOWC:1
 SHOWSB:0
 BELOW:0
