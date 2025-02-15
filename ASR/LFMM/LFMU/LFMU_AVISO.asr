@@ -1,0 +1,81 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20241128173615-241201-0001.sct
+SECTORTITLE:LFXX-LFXX_20241128173615-241201-0001.sct
+Free Text:LFMU Gates\1AE:freetext
+Free Text:LFMU Gates\1AW:freetext
+Free Text:LFMU Gates\1B:freetext
+Free Text:LFMU Gates\1CE:freetext
+Free Text:LFMU Gates\1CW:freetext
+Free Text:LFMU Gates\1S:freetext
+Free Text:LFMU Gates\2AE:freetext
+Free Text:LFMU Gates\2AW:freetext
+Free Text:LFMU Gates\2B:freetext
+Free Text:LFMU Gates\2CE:freetext
+Free Text:LFMU Gates\2CW:freetext
+Free Text:LFMU Gates\2S:freetext
+Free Text:LFMU Gates\3AE:freetext
+Free Text:LFMU Gates\3AW:freetext
+Free Text:LFMU Gates\3B:freetext
+Free Text:LFMU Gates\3S:freetext
+Free Text:LFMU Gates\4AE:freetext
+Free Text:LFMU Gates\4AW:freetext
+Free Text:LFMU Gates\4S:freetext
+Free Text:LFMU Gates\ACB:freetext
+Free Text:LFMU Gates\AVT:freetext
+Free Text:LFMU Gates\Hangars:freetext
+Free Text:LFMU Gates\Reserve Pelicandrome:freetext
+Free Text:LFMU Gates\SDIS 34:freetext
+Free Text:LFMU Gates\Service Piste:freetext
+Free Text:LFMU Gates\TWR:freetext
+Free Text:LFMU Gates\Terminal:freetext
+Free Text:LFMU Taxiways\A:freetext
+Free Text:LFMU Taxiways\B:freetext
+Free Text:LFMU Taxiways\P:freetext
+Free Text:LFMU Taxiways\T1:freetext
+Free Text:LFMU Taxiways\T2:freetext
+Free Text:LFMU Taxiways\T3:freetext
+Geo:LFMU Groundlayout AVISO:
+Regions:LFMU AVISO:polygon
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:43.297501:3.296806:43.344414:3.418221
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFMU
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:1766
+PLUGIN:vSMR:SRW1BottomRightY:326
+PLUGIN:vSMR:SRW1Display:1
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:68
+PLUGIN:vSMR:SRW1OffsetY:-6
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:1314
+PLUGIN:vSMR:SRW1TopLeftY:181
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200

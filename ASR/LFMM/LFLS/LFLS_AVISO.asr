@@ -39,12 +39,6 @@ Free Text:LFLS Gates\GA Buisiness Terminal:freetext
 Free Text:LFLS Gates\Hangar:freetext
 Free Text:LFLS Gates\TWR:freetext
 Free Text:LFLS Gates\Terminal:freetext
-Free Text:LFLS Points VFR\N:freetext
-Free Text:LFLS Points VFR\NE:freetext
-Free Text:LFLS Points VFR\NW:freetext
-Free Text:LFLS Points VFR\S:freetext
-Free Text:LFLS Points VFR\SE:freetext
-Free Text:LFLS Points VFR\W:freetext
 Free Text:LFLS Taxiways\N6:freetext
 Free Text:LFLS Taxiways\N7:freetext
 Free Text:LFLS Taxiways\S1:freetext
@@ -92,7 +86,7 @@ PLUGIN:vSMR:GndTrailsDots:4
 PLUGIN:vSMR:PredictedLine:0
 PLUGIN:vSMR:SRW1BottomRightX:303
 PLUGIN:vSMR:SRW1BottomRightY:734
-PLUGIN:vSMR:SRW1Display:0
+PLUGIN:vSMR:SRW1Display:1
 PLUGIN:vSMR:SRW1Filter:5500
 PLUGIN:vSMR:SRW1OffsetX:12
 PLUGIN:vSMR:SRW1OffsetY:103

@@ -1,0 +1,143 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20241128173615-241201-0001.sct
+SECTORTITLE:LFXX-LFXX_20241128173615-241201-0001.sct
+Free Text:LFPB Gates\ADVANCED AIR SUPPORT INTERNATIONAL:freetext
+Free Text:LFPB Gates\ASTON SKY:freetext
+Free Text:LFPB Gates\D:freetext
+Free Text:LFPB Gates\DASSAULT FALCON SERVICE:freetext
+Free Text:LFPB Gates\E:freetext
+Free Text:LFPB Gates\F1:freetext
+Free Text:LFPB Gates\F2:freetext
+Free Text:LFPB Gates\F3:freetext
+Free Text:LFPB Gates\G1:freetext
+Free Text:LFPB Gates\G2:freetext
+Free Text:LFPB Gates\H1:freetext
+Free Text:LFPB Gates\H2:freetext
+Free Text:LFPB Gates\H3:freetext
+Free Text:LFPB Gates\H4:freetext
+Free Text:LFPB Gates\H5:freetext
+Free Text:LFPB Gates\I:freetext
+Free Text:LFPB Gates\J:freetext
+Free Text:LFPB Gates\JETEX FLIGHT SUPPORT:freetext
+Free Text:LFPB Gates\K1:freetext
+Free Text:LFPB Gates\K2:freetext
+Free Text:LFPB Gates\L1:freetext
+Free Text:LFPB Gates\L2:freetext
+Free Text:LFPB Gates\M:freetext
+Free Text:LFPB Gates\N:freetext
+Free Text:LFPB Gates\P1:freetext
+Free Text:LFPB Gates\S:freetext
+Free Text:LFPB Gates\SIGNATURE FLIGHT SUPPORT:freetext
+Free Text:LFPB Gates\SKYVALET:freetext
+Free Text:LFPB Gates\T:freetext
+Free Text:LFPB Gates\UNIVERSAL AVIATION:freetext
+Free Text:LFPB Gates\Z1:freetext
+Free Text:LFPB Gates\Z2:freetext
+Free Text:LFPB Taxiways\A:freetext
+Free Text:LFPB Taxiways\A1:freetext
+Free Text:LFPB Taxiways\AB:freetext
+Free Text:LFPB Taxiways\AG1:freetext
+Free Text:LFPB Taxiways\AU:freetext
+Free Text:LFPB Taxiways\B:freetext
+Free Text:LFPB Taxiways\B1:freetext
+Free Text:LFPB Taxiways\C:freetext
+Free Text:LFPB Taxiways\C1:freetext
+Free Text:LFPB Taxiways\C11:freetext
+Free Text:LFPB Taxiways\C2:freetext
+Free Text:LFPB Taxiways\C22:freetext
+Free Text:LFPB Taxiways\C3:freetext
+Free Text:LFPB Taxiways\C4:freetext
+Free Text:LFPB Taxiways\DQ:freetext
+Free Text:LFPB Taxiways\N2:freetext
+Free Text:LFPB Taxiways\NB:freetext
+Free Text:LFPB Taxiways\NR6:freetext
+Free Text:LFPB Taxiways\Q:freetext
+Free Text:LFPB Taxiways\R:freetext
+Free Text:LFPB Taxiways\R1:freetext
+Free Text:LFPB Taxiways\U1:freetext
+Free Text:LFPB Taxiways\U2:freetext
+Free Text:LFPB Taxiways\U3:freetext
+Free Text:LFPB Taxiways\V2:freetext
+Free Text:LFPB Taxiways\V3:freetext
+Free Text:LFPB Taxiways\V4:freetext
+Free Text:LFPB Taxiways\VE:freetext
+Free Text:LFPB Taxiways\VG1:freetext
+Free Text:LFPB Taxiways\VG2:freetext
+Free Text:LFPB Taxiways\VJ:freetext
+Free Text:LFPB Taxiways\VL2:freetext
+Free Text:LFPB Taxiways\VQ:freetext
+Free Text:LFPB Taxiways\W1:freetext
+Free Text:LFPB Taxiways\W2:freetext
+Free Text:LFPB Taxiways\W3:freetext
+Free Text:LFPB Taxiways\W4:freetext
+Free Text:LFPB Taxiways\W5:freetext
+Free Text:LFPB Taxiways\WD:freetext
+Free Text:LFPB Taxiways\WE:freetext
+Free Text:LFPB Taxiways\WF11:freetext
+Free Text:LFPB Taxiways\WF12:freetext
+Free Text:LFPB Taxiways\WF21:freetext
+Free Text:LFPB Taxiways\WF22:freetext
+Free Text:LFPB Taxiways\WF3:freetext
+Free Text:LFPB Taxiways\WH1:freetext
+Free Text:LFPB Taxiways\WH2:freetext
+Free Text:LFPB Taxiways\WH4:freetext
+Free Text:LFPB Taxiways\WH5:freetext
+Free Text:LFPB Taxiways\WJ:freetext
+Free Text:LFPB Taxiways\WK1:freetext
+Free Text:LFPB Taxiways\WK2:freetext
+Free Text:LFPB Taxiways\WL1:freetext
+Free Text:LFPB Taxiways\WN:freetext
+Free Text:LFPB Taxiways\WT:freetext
+Free Text:LFPB Taxiways\WZ1:freetext
+Free Text:LFPB Taxiways\WZ2:freetext
+Free Text:LFPB Taxiways\X:freetext
+Regions:LFPB AVISO:polygon
+Runways:LFPB 03-21:centerline
+Runways:LFPB 03-21:name
+Runways:LFPB 07-25:centerline
+Runways:LFPB 07-25:name
+Runways:LFPB 09-27:centerline
+Runways:LFPB 09-27:name
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:48.937612:2.380844:48.984524:2.502258
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFPB
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:1766
+PLUGIN:vSMR:SRW1BottomRightY:326
+PLUGIN:vSMR:SRW1Display:1
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:-113
+PLUGIN:vSMR:SRW1OffsetY:21
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:1314
+PLUGIN:vSMR:SRW1TopLeftY:181
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200
