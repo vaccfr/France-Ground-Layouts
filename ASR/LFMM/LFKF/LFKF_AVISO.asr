@@ -1,0 +1,93 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20241128173615-241201-0001.sct
+SECTORTITLE:LFXX-LFXX_20241128173615-241201-0001.sct
+Free Text:LFKF Gates\10:freetext
+Free Text:LFKF Gates\11:freetext
+Free Text:LFKF Gates\12:freetext
+Free Text:LFKF Gates\12B:freetext
+Free Text:LFKF Gates\13:freetext
+Free Text:LFKF Gates\14:freetext
+Free Text:LFKF Gates\21:freetext
+Free Text:LFKF Gates\21A:freetext
+Free Text:LFKF Gates\21B:freetext
+Free Text:LFKF Gates\22:freetext
+Free Text:LFKF Gates\23:freetext
+Free Text:LFKF Gates\24:freetext
+Free Text:LFKF Gates\31:freetext
+Free Text:LFKF Gates\32:freetext
+Free Text:LFKF Gates\33:freetext
+Free Text:LFKF Gates\34:freetext
+Free Text:LFKF Gates\35:freetext
+Free Text:LFKF Gates\36:freetext
+Free Text:LFKF Gates\37:freetext
+Free Text:LFKF Gates\38:freetext
+Free Text:LFKF Gates\51:freetext
+Free Text:LFKF Gates\52:freetext
+Free Text:LFKF Gates\53:freetext
+Free Text:LFKF Gates\54:freetext
+Free Text:LFKF Gates\55:freetext
+Free Text:LFKF Gates\7:freetext
+Free Text:LFKF Gates\8:freetext
+Free Text:LFKF Gates\9:freetext
+Free Text:LFKF Gates\H1:freetext
+Free Text:LFKF Gates\H2:freetext
+Free Text:LFKF Gates\H3:freetext
+Free Text:LFKF Gates\H4:freetext
+Free Text:LFKF Gates\TWR:freetext
+Free Text:LFKF Gates\Terminal:freetext
+Free Text:LFKF Taxiways\05:freetext
+Free Text:LFKF Taxiways\23:freetext
+Free Text:LFKF Taxiways\A:freetext
+Free Text:LFKF Taxiways\B:freetext
+Free Text:LFKF Taxiways\C:freetext
+Free Text:LFKF Taxiways\H:freetext
+Free Text:LFKF Taxiways\K:freetext
+Free Text:LFKF Taxiways\K1:freetext
+Free Text:LFKF Taxiways\O:freetext
+Free Text:LFKF Taxiways\P:freetext
+Geo:LFKF Groundlayout AVISO:
+Regions:LFKF AVISO:polygon
+Runways:LFKF 05-23:centerline
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:41.490181:9.069442:41.513769:9.130489
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFKF
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:1788
+PLUGIN:vSMR:SRW1BottomRightY:455
+PLUGIN:vSMR:SRW1Display:1
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:0
+PLUGIN:vSMR:SRW1OffsetY:0
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:1388
+PLUGIN:vSMR:SRW1TopLeftY:155
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200
