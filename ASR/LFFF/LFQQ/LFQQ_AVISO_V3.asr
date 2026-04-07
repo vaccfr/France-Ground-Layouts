@@ -1,0 +1,127 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20251128122128-251201-0002.sct
+SECTORTITLE:LFXX-LFXX_20251128122128-251201-0002.sct
+Free Text:LFQQ Gates\Aviation Generale:freetext
+Free Text:LFQQ Gates\B01:freetext
+Free Text:LFQQ Gates\B02:freetext
+Free Text:LFQQ Gates\B03:freetext
+Free Text:LFQQ Gates\B04:freetext
+Free Text:LFQQ Gates\B06:freetext
+Free Text:LFQQ Gates\B07:freetext
+Free Text:LFQQ Gates\B08:freetext
+Free Text:LFQQ Gates\B09:freetext
+Free Text:LFQQ Gates\B10:freetext
+Free Text:LFQQ Gates\B11:freetext
+Free Text:LFQQ Gates\B12:freetext
+Free Text:LFQQ Gates\B13:freetext
+Free Text:LFQQ Gates\B14:freetext
+Free Text:LFQQ Gates\B15:freetext
+Free Text:LFQQ Gates\B16:freetext
+Free Text:LFQQ Gates\B17:freetext
+Free Text:LFQQ Gates\C10:freetext
+Free Text:LFQQ Gates\C11:freetext
+Free Text:LFQQ Gates\C12:freetext
+Free Text:LFQQ Gates\C13:freetext
+Free Text:LFQQ Gates\C1E:freetext
+Free Text:LFQQ Gates\C1W:freetext
+Free Text:LFQQ Gates\C2E:freetext
+Free Text:LFQQ Gates\C2W:freetext
+Free Text:LFQQ Gates\C3E:freetext
+Free Text:LFQQ Gates\C3W:freetext
+Free Text:LFQQ Gates\C4E:freetext
+Free Text:LFQQ Gates\C4W:freetext
+Free Text:LFQQ Gates\C5E:freetext
+Free Text:LFQQ Gates\C5W:freetext
+Free Text:LFQQ Gates\C6E:freetext
+Free Text:LFQQ Gates\C6W:freetext
+Free Text:LFQQ Gates\C7E:freetext
+Free Text:LFQQ Gates\C7W:freetext
+Free Text:LFQQ Gates\C8E:freetext
+Free Text:LFQQ Gates\C8W:freetext
+Free Text:LFQQ Gates\C9E:freetext
+Free Text:LFQQ Gates\C9W:freetext
+Free Text:LFQQ Gates\D01E:freetext
+Free Text:LFQQ Gates\D01W:freetext
+Free Text:LFQQ Gates\D02E:freetext
+Free Text:LFQQ Gates\D02W:freetext
+Free Text:LFQQ Gates\D03E:freetext
+Free Text:LFQQ Gates\D03W:freetext
+Free Text:LFQQ Gates\D04E:freetext
+Free Text:LFQQ Gates\D04W:freetext
+Free Text:LFQQ Gates\D05E:freetext
+Free Text:LFQQ Gates\D05W:freetext
+Free Text:LFQQ Gates\D06E:freetext
+Free Text:LFQQ Gates\D06W:freetext
+Free Text:LFQQ Gates\D07E:freetext
+Free Text:LFQQ Gates\D07W:freetext
+Free Text:LFQQ Gates\Fret:freetext
+Free Text:LFQQ Gates\H:freetext
+Free Text:LFQQ Gates\Parking E:freetext
+Free Text:LFQQ Gates\Terminal:freetext
+Free Text:LFQQ Taxiways\E:freetext
+Free Text:LFQQ Taxiways\F:freetext
+Free Text:LFQQ Taxiways\P2:freetext
+Free Text:LFQQ Taxiways\P3:freetext
+Free Text:LFQQ Taxiways\P4:freetext
+Free Text:LFQQ Taxiways\P5:freetext
+Free Text:LFQQ Taxiways\T2:freetext
+Free Text:LFQQ Taxiways\T3:freetext
+Free Text:LFQQ Taxiways\T4:freetext
+Free Text:LFQQ Taxiways\T5:freetext
+Free Text:LFQQ Taxiways\V1:freetext
+Free Text:LFQQ Taxiways\V2:freetext
+Free Text:LFQQ Taxiways\V3:freetext
+Free Text:LFQQ Taxiways\V4:freetext
+Free Text:LFQQ Taxiways\V5:freetext
+Free Text:LFQQ Taxiways\V6:freetext
+Free Text:LFQQ Taxiways\V7:freetext
+Free Text:LFQQ Taxiways\V8:freetext
+Geo:LFQQ Groundlayout AVISO V3:
+Regions:LFQQ AVISO V3:polygon
+Runways:LFQQ 01-19:centerline
+Runways:LFQQ 01-19:name
+Runways:LFQQ 08-26:centerline
+Runways:LFQQ 08-26:name
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:50.562724:3.084941:50.577065:3.122058
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFQQ
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:1649
+PLUGIN:vSMR:SRW1BottomRightY:335
+PLUGIN:vSMR:SRW1Display:0
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:101
+PLUGIN:vSMR:SRW1OffsetY:56
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:1237
+PLUGIN:vSMR:SRW1TopLeftY:158
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200

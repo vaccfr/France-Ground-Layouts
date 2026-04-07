@@ -155,9 +155,7 @@ LFBZ Groundlayout AVISO                  N043.28.13.734 W001.32.04.589 N043.28.1
                                          N043.28.09.268 W001.32.06.111 N043.28.09.148 W001.32.06.111 COLOR_Taxiway
                                          N043.28.09.148 W001.32.06.111 N043.28.09.388 W001.32.06.108 COLOR_Taxiway
                                          N043.28.09.388 W001.32.06.108 N043.28.09.388 W001.32.06.297 COLOR_Taxiway
-
 [REGIONS]
-
 REGIONNAME LFBZ AVISO
 COLOR_GrasSurface          N043.28.02.689 W001.32.21.759
                            N043.28.02.450 W001.32.21.570

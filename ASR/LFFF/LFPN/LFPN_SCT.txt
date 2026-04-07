@@ -1,0 +1,15 @@
+[GEO]
+LF R35A PARIS SACLAY VERSAILLES          N048.45.39.000 E001.59.19.000 N048.45.42.000 E002.04.50.000 COLOR_RestrictedArea
+                                         N048.45.42.000 E002.04.50.000 N048.45.30.000 E002.07.02.000 COLOR_RestrictedArea
+                                         N048.45.30.000 E002.07.02.000 N048.45.53.000 E002.08.57.000 COLOR_RestrictedArea
+                                         N048.45.53.000 E002.08.57.000 N048.43.39.000 E002.09.37.000 COLOR_RestrictedArea
+                                         N048.43.39.000 E002.09.37.000 N048.40.53.000 E002.06.38.000 COLOR_RestrictedArea
+                                         N048.40.53.000 E002.06.38.000 N048.40.39.000 E001.59.32.000 COLOR_RestrictedArea
+                                         N048.40.39.000 E001.59.32.000 N048.45.39.000 E001.59.19.000 COLOR_RestrictedArea
+										 
+LF R35B PARIS SACLAY VERSAILLES          N048.45.47.000 E001.56.48.000 N048.45.38.000 E001.58.47.000 COLOR_RestrictedArea
+                                         N048.45.38.000 E001.58.47.000 N048.45.39.000 E001.59.19.000 COLOR_RestrictedArea
+                                         N048.45.39.000 E001.59.19.000 N048.40.39.000 E001.59.32.000 COLOR_RestrictedArea
+                                         N048.40.39.000 E001.59.32.000 N048.40.39.000 E001.58.36.000 COLOR_RestrictedArea
+                                         N048.40.39.000 E001.58.36.000 N048.41.48.000 E001.57.45.000 COLOR_RestrictedArea
+                                         N048.41.48.000 E001.57.45.000 N048.45.47.000 E001.56.48.000 COLOR_RestrictedArea

@@ -1,0 +1,9 @@
+[FREETEXT]
+;============================================== ~~ LFMM/LFME/Points VFR ~~ ===============================================;
+N043.39.59.000:E004.35.15.000:LFME Points VFR:AL
+N043.49.49.000:E004.38.00.000:LFME Points VFR:BC
+N043.46.46.000:E004.11.41.000:LFME Points VFR:CA
+N043.57.10.000:E004.28.42.000:LFME Points VFR:CS
+N043.40.55.000:E004.12.50.000:LFME Points VFR:AS
+N043.38.39.030:E004.25.56.800:LFME Points VFR:SG
+N043.41.24.900:E004.32.40.350:LFME Points VFR:PA

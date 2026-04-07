@@ -1,0 +1,138 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20241128173615-241201-0001.sct
+SECTORTITLE:LFXX-LFXX_20241128173615-241201-0001.sct
+Free Text:LFMD Gates\1.1:freetext
+Free Text:LFMD Gates\1.2:freetext
+Free Text:LFMD Gates\1.3:freetext
+Free Text:LFMD Gates\1.A:freetext
+Free Text:LFMD Gates\1.B:freetext
+Free Text:LFMD Gates\2.1:freetext
+Free Text:LFMD Gates\2.2:freetext
+Free Text:LFMD Gates\2.3:freetext
+Free Text:LFMD Gates\2.A:freetext
+Free Text:LFMD Gates\2.B:freetext
+Free Text:LFMD Gates\3.1:freetext
+Free Text:LFMD Gates\3.2:freetext
+Free Text:LFMD Gates\3.3:freetext
+Free Text:LFMD Gates\3.A:freetext
+Free Text:LFMD Gates\3.B:freetext
+Free Text:LFMD Gates\4.1:freetext
+Free Text:LFMD Gates\4.2:freetext
+Free Text:LFMD Gates\4.3:freetext
+Free Text:LFMD Gates\4.A:freetext
+Free Text:LFMD Gates\4.B:freetext
+Free Text:LFMD Gates\5.1:freetext
+Free Text:LFMD Gates\5.2:freetext
+Free Text:LFMD Gates\5.3:freetext
+Free Text:LFMD Gates\5.A:freetext
+Free Text:LFMD Gates\5.B:freetext
+Free Text:LFMD Gates\6.1:freetext
+Free Text:LFMD Gates\6.2:freetext
+Free Text:LFMD Gates\6.3:freetext
+Free Text:LFMD Gates\7.1:freetext
+Free Text:LFMD Gates\7.2:freetext
+Free Text:LFMD Gates\ALPHA:freetext
+Free Text:LFMD Gates\Civile:freetext
+Free Text:LFMD Gates\ECHO:freetext
+Free Text:LFMD Gates\GOLF:freetext
+Free Text:LFMD Gates\H1:freetext
+Free Text:LFMD Gates\H10:freetext
+Free Text:LFMD Gates\H11:freetext
+Free Text:LFMD Gates\H12:freetext
+Free Text:LFMD Gates\H14:freetext
+Free Text:LFMD Gates\H16:freetext
+Free Text:LFMD Gates\H2:freetext
+Free Text:LFMD Gates\H3:freetext
+Free Text:LFMD Gates\H4:freetext
+Free Text:LFMD Gates\H5:freetext
+Free Text:LFMD Gates\H6:freetext
+Free Text:LFMD Gates\H7:freetext
+Free Text:LFMD Gates\H8:freetext
+Free Text:LFMD Gates\H9:freetext
+Free Text:LFMD Gates\LIMA:freetext
+Free Text:LFMD Gates\MIKE:freetext
+Free Text:LFMD Gates\NOVEMBRE:freetext
+Free Text:LFMD Gates\SIERRA:freetext
+Free Text:LFMD Gates\Securite:freetext
+Free Text:LFMD Taxiways\04:freetext
+Free Text:LFMD Taxiways\17:freetext
+Free Text:LFMD Taxiways\17L:freetext
+Free Text:LFMD Taxiways\22:freetext
+Free Text:LFMD Taxiways\35:freetext
+Free Text:LFMD Taxiways\35R:freetext
+Free Text:LFMD Taxiways\A1:freetext
+Free Text:LFMD Taxiways\A2:freetext
+Free Text:LFMD Taxiways\A3:freetext
+Free Text:LFMD Taxiways\A5:freetext
+Free Text:LFMD Taxiways\A6:freetext
+Free Text:LFMD Taxiways\A7:freetext
+Free Text:LFMD Taxiways\B1:freetext
+Free Text:LFMD Taxiways\B2:freetext
+Free Text:LFMD Taxiways\B5:freetext
+Free Text:LFMD Taxiways\B6:freetext
+Free Text:LFMD Taxiways\C1:freetext
+Free Text:LFMD Taxiways\C2:freetext
+Free Text:LFMD Taxiways\C3:freetext
+Free Text:LFMD Taxiways\C5:freetext
+Free Text:LFMD Taxiways\EB:freetext
+Free Text:LFMD Taxiways\F:freetext
+Free Text:LFMD Taxiways\P1:freetext
+Free Text:LFMD Taxiways\P2:freetext
+Free Text:LFMD Taxiways\R:freetext
+Free Text:LFMD Taxiways\V:freetext
+Free Text:LFMD Taxiways\W:freetext
+Free Text:LFMD Taxiways\WB:freetext
+Free Text:LFMD Taxiways\WE:freetext
+Free Text:LFMD Taxiways\X:freetext
+Free Text:LFMD Taxiways\Y:freetext
+Free Text:LFMD Taxiways\YA:freetext
+Free Text:LFMD Taxiways\YB:freetext
+Free Text:LFMD Taxiways\YC:freetext
+Geo:LFMD Groundlayout AVISO:
+Regions:LFMD AVISO:polygon
+Runways:LFMD 04-22:centerline
+Runways:LFMD 17-35:centerline
+Runways:LFMD 17L-35R:centerline
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:43.524503:6.905673:43.562034:7.014334
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFMD
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:600
+PLUGIN:vSMR:SRW1BottomRightY:500
+PLUGIN:vSMR:SRW1Display:0
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:0
+PLUGIN:vSMR:SRW1OffsetY:0
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:200
+PLUGIN:vSMR:SRW1TopLeftY:200
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200

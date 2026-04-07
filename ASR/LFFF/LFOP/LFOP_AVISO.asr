@@ -1,0 +1,80 @@
+DisplayTypeName:SMR radar display
+DisplayTypeNeedRadarContent:0
+DisplayTypeGeoReferenced:1
+SECTORFILE:C:\Users\micro\AppData\Roaming\EuroScope\LFXX-LFXX_20251128122128-251201-0002.sct
+SECTORTITLE:LFXX-LFXX_20251128122128-251201-0002.sct
+Free Text:LFOP Gates\B1:freetext
+Free Text:LFOP Gates\B2:freetext
+Free Text:LFOP Gates\B3:freetext
+Free Text:LFOP Gates\B4:freetext
+Free Text:LFOP Gates\P A:freetext
+Free Text:LFOP Gates\P C:freetext
+Free Text:LFOP Gates\P M:freetext
+Free Text:LFOP Gates\P U:freetext
+Free Text:LFOP Gates\P V:freetext
+Free Text:LFOP Taxiways\P:freetext
+Free Text:LFOP Taxiways\R1:freetext
+Free Text:LFOP Taxiways\R2:freetext
+Free Text:LFOP Taxiways\S1:freetext
+Free Text:LFOP Taxiways\S2:freetext
+Free Text:LFOP Taxiways\S3:freetext
+Free Text:LFOP Taxiways\T1:freetext
+Free Text:LFOP Taxiways\T2:freetext
+Free Text:LFOP Taxiways\T3:freetext
+Free Text:LFOP Taxiways\Y:freetext
+Free Text:LFOP Taxiways\Z2:freetext
+Free Text:LFOP Taxiways\Z3:freetext
+Geo:LFOP Groundlayout AVISO:
+Regions:LFOP AVISO:polygon
+Runways:LFOP 04-22:centerline
+Runways:LFOP 04-22:name
+Runways:LFOP 05-23:centerline
+Runways:LFOP 05-23:name
+SHOWC:1
+SHOWSB:0
+BELOW:0
+ABOVE:0
+LEADER:5
+SHOWLEADER:1
+TURNLEADER:0
+HISTORY_DOTS:5
+SIMULATION_MODE:1
+DISABLEPANNING:0
+DISABLEZOOMING:0
+DisplayRotation:0.00000
+TAGFAMILY:Matias (built in)
+WINDOWAREA:49.368030:1.133457:49.404649:1.228231
+PLUGIN:CoFrance:APP:0
+PLUGIN:CoFrance:FILT:0
+PLUGIN:CoFrance:FILTABOVE:99999
+PLUGIN:CoFrance:FILTBELOW:0
+PLUGIN:CoFrance:RAD:1
+PLUGIN:CoFrance:VV:0
+PLUGIN:CoFrance:VVTIME:2
+PLUGIN:vSMR:ActiveProfile:Default
+PLUGIN:vSMR:Afterglow:1
+PLUGIN:vSMR:Airport:LFOP
+PLUGIN:vSMR:AppTrailsDots:4
+PLUGIN:vSMR:FontSize:1
+PLUGIN:vSMR:GndTrailsDots:4
+PLUGIN:vSMR:PredictedLine:0
+PLUGIN:vSMR:SRW1BottomRightX:600
+PLUGIN:vSMR:SRW1BottomRightY:500
+PLUGIN:vSMR:SRW1Display:0
+PLUGIN:vSMR:SRW1Filter:5500
+PLUGIN:vSMR:SRW1OffsetX:0
+PLUGIN:vSMR:SRW1OffsetY:0
+PLUGIN:vSMR:SRW1Rotation:0
+PLUGIN:vSMR:SRW1Scale:15
+PLUGIN:vSMR:SRW1TopLeftX:200
+PLUGIN:vSMR:SRW1TopLeftY:200
+PLUGIN:vSMR:SRW2BottomRightX:600
+PLUGIN:vSMR:SRW2BottomRightY:500
+PLUGIN:vSMR:SRW2Display:0
+PLUGIN:vSMR:SRW2Filter:5500
+PLUGIN:vSMR:SRW2OffsetX:0
+PLUGIN:vSMR:SRW2OffsetY:0
+PLUGIN:vSMR:SRW2Rotation:0
+PLUGIN:vSMR:SRW2Scale:15
+PLUGIN:vSMR:SRW2TopLeftX:200
+PLUGIN:vSMR:SRW2TopLeftY:200
