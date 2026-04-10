@@ -26,10 +26,11 @@
 - Les aprons doivent être définis en polygones à part, couleur COLOR_HardSurface3
 - Les zones d'herbes doivent être définies en polygones à part, couleur COLOR_GrasSurface
 - Les batiments doivent être définis en polygones à part, couleur COLOR_Building
-- Les points d'attente CAT I doivent être définis en polygones à part, couleur COLOR_ProhibitedArea
+- Les points d'attente CAT I doivent être définis en polygones à part, couleur COLOR_Stopbar
 - Les points d'attente CAT III doivent être définis en polygones à part, couleur COLOR_TaxiwayOrange
+- - Les points d'attente intermédiaires doivent être définis en polygones à part, couleur COLOR_TaxiwayOrange
 - Les zones désafectées doivent être définies en polygones à part, couleur COLOR_HardSurface4
 - Les zones chevrons doivent être définies en polygones à part, couleur COLOR_HardSurface4
 - Les lignes médianes des portes doivent être définis en 'path' (rubrique [GEO]) à part, couleur COLOR_Taxiway
 
-Pour toute quesion ou problème en rapport avec la création d'un AVISO, rendez vous directement sur le Discord de French vACC.
+Pour toute question ou problème en rapport avec la création d'un AVISO, rendez vous directement sur le Discord de French vACC.
