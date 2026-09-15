@@ -1,0 +1,99 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFDH AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFDH",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "18L",
+          "36R"
+        ],
+        "headings": [
+          184,
+          4
+        ],
+        "thresholds": [
+          [
+            0.601110833,
+            43.685277778
+          ],
+          [
+            0.600277778,
+            43.677777778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "18",
+          "36"
+        ],
+        "headings": [
+          183,
+          3
+        ],
+        "thresholds": [
+          [
+            0.600505833,
+            43.692141944
+          ],
+          [
+            0.599196944,
+            43.676963889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      0.6,
+      43.686943889
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.runwaygrass.008000": {
+      "$ref": "style.line.runwaygrass.008000"
+    },
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.apronsurface.808080": {
+      "$ref": "style.line.apronsurface.808080"
+    },
+    "line.stopbar.7e0000": {
+      "$ref": "style.line.stopbar.7e0000"
+    },
+    "line.centerlines.ffff00": {
+      "$ref": "style.line.centerlines.ffff00"
+    },
+    "line.labels.808080": {
+      "$ref": "style.line.labels.808080"
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

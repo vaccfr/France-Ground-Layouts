@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFSO AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFSO",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "02",
+          "20"
+        ],
+        "headings": [
+          17,
+          197
+        ],
+        "thresholds": [
+          [
+            5.949099722,
+            48.573016944
+          ],
+          [
+            5.959960833,
+            48.593363889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      5.954443889,
+      48.583055833
+    ]
+  },
+  "styles": {
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.apronsurface.808080": {
+      "$ref": "style.line.apronsurface.808080"
+    }
+  },
+  "vsmr_groups": []
+}

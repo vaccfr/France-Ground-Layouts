@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFCL AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFCL",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "15",
+          "33"
+        ],
+        "headings": [
+          154,
+          334
+        ],
+        "thresholds": [
+          [
+            1.497174722,
+            43.59
+          ],
+          [
+            1.501357778,
+            43.583382778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      1.498610833,
+      43.587777778
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    }
+  },
+  "vsmr_groups": []
+}

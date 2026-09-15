@@ -1,0 +1,119 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFRU AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFRU",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "15",
+          "33"
+        ],
+        "headings": [
+          153,
+          333
+        ],
+        "thresholds": [
+          [
+            -3.816160833,
+            48.606699722
+          ],
+          [
+            -3.810793889,
+            48.599977778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "09",
+          "27"
+        ],
+        "headings": [
+          90,
+          270
+        ],
+        "thresholds": [
+          [
+            -3.816160833,
+            48.602230833
+          ],
+          [
+            -3.809938889,
+            48.602285833
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "04",
+          "22"
+        ],
+        "headings": [
+          41,
+          221
+        ],
+        "thresholds": [
+          [
+            -3.821718889,
+            48.598666944
+          ],
+          [
+            -3.808825,
+            48.608827778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      -3.816666944,
+      48.600832778
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.runwaygrass.008000": {
+      "$ref": "style.line.runwaygrass.008000"
+    },
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.apronsurface.808080": {
+      "$ref": "style.line.apronsurface.808080"
+    },
+    "line.stopbar.7e0000": {
+      "$ref": "style.line.stopbar.7e0000"
+    },
+    "line.centerlines.ffff00": {
+      "$ref": "style.line.centerlines.ffff00"
+    },
+    "line.labels.808080": {
+      "$ref": "style.line.labels.808080"
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

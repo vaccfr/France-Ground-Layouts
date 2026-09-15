@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFBM AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFBM",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "09",
+          "27"
+        ],
+        "headings": [
+          87,
+          267
+        ],
+        "thresholds": [
+          [
+            -0.531777778,
+            43.910716944
+          ],
+          [
+            -0.488471944,
+            43.912241944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      -0.51,
+      43.911388889
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    }
+  },
+  "vsmr_groups": []
+}

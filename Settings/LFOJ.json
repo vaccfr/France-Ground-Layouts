@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFOJ AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFOJ",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "07",
+          "25"
+        ],
+        "headings": [
+          68,
+          248
+        ],
+        "thresholds": [
+          [
+            1.745560833,
+            47.983910833
+          ],
+          [
+            1.775688889,
+            47.991543889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      1.760555833,
+      47.987777778
+    ]
+  },
+  "styles": {
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.apronsurface.808080": {
+      "$ref": "style.line.apronsurface.808080"
+    }
+  },
+  "vsmr_groups": []
+}
