@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFQT AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFQT",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "04R",
+          "22L"
+        ],
+        "headings": [
+          36,
+          216
+        ],
+        "thresholds": [
+          [
+            2.647960833,
+            50.620905833
+          ],
+          [
+            2.656499722,
+            50.627991944
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "04",
+          "22"
+        ],
+        "headings": [
+          36,
+          216
+        ],
+        "thresholds": [
+          [
+            2.634855833,
+            50.612252778
+          ],
+          [
+            2.650155833,
+            50.624952778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.64,
+      50.616666944
+    ]
+  },
+  "styles": {
+    "line.taxiwayborder.0000ff": {
+      "$ref": "style.line.taxiwayborder.0000ff"
+    },
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.landmark3.b4424b": {
+      "$ref": "style.line.landmark3.b4424b"
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

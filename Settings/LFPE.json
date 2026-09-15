@@ -1,0 +1,34 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFPE AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFPE",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.833888889,
+      48.926943889
+    ]
+  },
+  "styles": {
+    "line.runwaygrass.008000": {
+      "$ref": "style.line.runwaygrass.008000"
+    }
+  },
+  "vsmr_groups": []
+}

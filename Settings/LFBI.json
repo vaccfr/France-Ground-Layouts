@@ -1,0 +1,131 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFBI AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFBI",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "03R",
+          "21L"
+        ],
+        "headings": [
+          29,
+          209
+        ],
+        "thresholds": [
+          [
+            0.304027778,
+            46.581563889
+          ],
+          [
+            0.307046944,
+            46.585088889
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "03L",
+          "21R"
+        ],
+        "headings": [
+          29,
+          209
+        ],
+        "thresholds": [
+          [
+            0.300302778,
+            46.582482778
+          ],
+          [
+            0.308857778,
+            46.592466944
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "03",
+          "21"
+        ],
+        "headings": [
+          29,
+          209
+        ],
+        "thresholds": [
+          [
+            0.300116944,
+            46.579618889
+          ],
+          [
+            0.315760833,
+            46.597857778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      0.306666944,
+      46.587499722
+    ]
+  },
+  "styles": {
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.hardsurface4.969393": {
+      "$ref": "style.polygon.hardsurface4.969393"
+    },
+    "polygon.hardsurface3.8a807f": {
+      "$ref": "style.polygon.hardsurface3.8a807f"
+    },
+    "polygon.hardsurface2.595e5b": {
+      "$ref": "style.polygon.hardsurface2.595e5b"
+    },
+    "polygon.runwaygrass.008000": {
+      "$ref": "style.polygon.runwaygrass.008000"
+    },
+    "polygon.runwayconcrete.555555": {
+      "$ref": "style.polygon.runwayconcrete.555555"
+    },
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "polygon.stopbar.7e0000": {
+      "$ref": "style.polygon.stopbar.7e0000"
+    },
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.taxiwayorange.cc6d00": {
+      "$ref": "style.line.taxiwayorange.cc6d00"
+    },
+    "line.runwayborder.808080": {
+      "$ref": "style.line.runwayborder.808080"
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

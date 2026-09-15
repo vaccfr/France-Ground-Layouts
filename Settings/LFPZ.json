@@ -1,0 +1,113 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFPZ AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFPZ",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "11R",
+          "29L"
+        ],
+        "headings": [
+          112,
+          292
+        ],
+        "thresholds": [
+          [
+            2.064205833,
+            48.812899722
+          ],
+          [
+            2.071468889,
+            48.810857778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "headings": [
+          112,
+          292
+        ],
+        "thresholds": [
+          [
+            2.065441944,
+            48.813724722
+          ],
+          [
+            2.071516944,
+            48.812016944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.073332778,
+      48.810277778
+    ]
+  },
+  "styles": {
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.hardsurface2.595e5b": {
+      "$ref": "style.polygon.hardsurface2.595e5b"
+    },
+    "polygon.grassurface2.339933": {
+      "$ref": "style.polygon.grassurface2.339933"
+    },
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "polygon.runwaygrass.008000": {
+      "$ref": "style.polygon.runwaygrass.008000"
+    },
+    "polygon.runwayborder.808080": {
+      "$ref": "style.polygon.runwayborder.808080"
+    },
+    "polygon.stopbar.7e0000": {
+      "$ref": "style.polygon.stopbar.7e0000"
+    },
+    "polygon.apronsurface.808080": {
+      "name": "Apron Surface",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_APRONSURFACE",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "COLOR_ApronSurface"
+          }
+        }
+      }
+    },
+    "polygon.hardsurface3.8a807f": {
+      "$ref": "style.polygon.hardsurface3.8a807f"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

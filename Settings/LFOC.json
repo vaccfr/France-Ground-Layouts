@@ -1,0 +1,61 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFOC AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFOC",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "10",
+          "28"
+        ],
+        "headings": [
+          96,
+          276
+        ],
+        "thresholds": [
+          [
+            1.362332778,
+            48.059491944
+          ],
+          [
+            1.389530833,
+            48.056921944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      1.379721944,
+      48.057777778
+    ]
+  },
+  "styles": {
+    "line.taxiwayborder.0000ff": {
+      "$ref": "style.line.taxiwayborder.0000ff"
+    },
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.landmark3.b4424b": {
+      "$ref": "style.line.landmark3.b4424b"
+    }
+  },
+  "vsmr_groups": []
+}

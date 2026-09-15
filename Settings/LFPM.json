@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFPM AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFPM",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "10",
+          "28"
+        ],
+        "headings": [
+          103,
+          283
+        ],
+        "thresholds": [
+          [
+            2.663285833,
+            48.606477778
+          ],
+          [
+            2.688205833,
+            48.602507778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "01",
+          "19"
+        ],
+        "headings": [
+          12,
+          192
+        ],
+        "thresholds": [
+          [
+            2.671077778,
+            48.606163889
+          ],
+          [
+            2.674974722,
+            48.617582778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.670832778,
+      48.605277778
+    ]
+  },
+  "styles": {
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

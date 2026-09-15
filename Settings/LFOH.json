@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFOH AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFOH",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "04",
+          "22"
+        ],
+        "headings": [
+          43,
+          223
+        ],
+        "thresholds": [
+          [
+            0.077585833,
+            49.526530833
+          ],
+          [
+            0.099307778,
+            49.541616944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      0.088055833,
+      49.533888889
+    ]
+  },
+  "styles": {
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

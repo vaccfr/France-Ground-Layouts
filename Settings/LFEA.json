@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFEA AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFEA",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "06",
+          "24"
+        ],
+        "headings": [
+          61,
+          241
+        ],
+        "thresholds": [
+          [
+            -3.205018889,
+            47.323830833
+          ],
+          [
+            -3.197413889,
+            47.326768889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      -3.198888889,
+      47.326110833
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    }
+  },
+  "vsmr_groups": []
+}

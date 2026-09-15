@@ -1,0 +1,69 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFPX AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFPX",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      1.980277778,
+      48.842221944
+    ]
+  },
+  "styles": {
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.grassurface3.727e67": {
+      "name": "Gras Surface 3",
+      "layer": "Terrain",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_GRASSURFACE3_2",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "LIGHT_LFPX_POLYGON_GRASSURFACE3"
+          }
+        }
+      }
+    },
+    "polygon.grassurface2.339933": {
+      "$ref": "style.polygon.grassurface2.339933"
+    },
+    "polygon.hardsurface4.969393": {
+      "$ref": "style.polygon.hardsurface4.969393"
+    },
+    "polygon.hardsurface3.8a807f": {
+      "$ref": "style.polygon.hardsurface3.8a807f"
+    },
+    "polygon.runwaygrass.008000": {
+      "$ref": "style.polygon.runwaygrass.008000"
+    },
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "line.runwayborder.808080": {
+      "$ref": "style.line.runwayborder.808080"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

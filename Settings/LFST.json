@@ -1,0 +1,96 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFST AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFST",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "05",
+          "23"
+        ],
+        "headings": [
+          46,
+          226
+        ],
+        "thresholds": [
+          [
+            7.616030833,
+            48.531193889
+          ],
+          [
+            7.640441944,
+            48.545441944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      7.634443889,
+      48.541943889
+    ]
+  },
+  "styles": {
+    "polygon.grassurface4.1d2b2b": {
+      "name": "Gras Surface 4",
+      "layer": "Terrain",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_GRASSURFACE4",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "COLOR_GrasSurface4"
+          }
+        }
+      }
+    },
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.hardsurface4.969393": {
+      "$ref": "style.polygon.hardsurface4.969393"
+    },
+    "polygon.hardsurface2.595e5b": {
+      "$ref": "style.polygon.hardsurface2.595e5b"
+    },
+    "polygon.runwayconcrete.555555": {
+      "$ref": "style.polygon.runwayconcrete.555555"
+    },
+    "polygon.hardsurface3.8a807f": {
+      "$ref": "style.polygon.hardsurface3.8a807f"
+    },
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "polygon.stopbar.7e0000": {
+      "$ref": "style.polygon.stopbar.7e0000"
+    },
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

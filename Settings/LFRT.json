@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFRT AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFRT",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "06",
+          "24"
+        ],
+        "headings": [
+          59,
+          239
+        ],
+        "thresholds": [
+          [
+            -2.867380833,
+            48.533141944
+          ],
+          [
+            -2.841843889,
+            48.543388889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      -2.856666944,
+      48.5375
+    ]
+  },
+  "styles": {
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

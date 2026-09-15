@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFBX AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFBX",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "11L",
+          "29R"
+        ],
+        "headings": [
+          113,
+          293
+        ],
+        "thresholds": [
+          [
+            0.812646944,
+            45.198824722
+          ],
+          [
+            0.817135833,
+            45.197432778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "11",
+          "29"
+        ],
+        "headings": [
+          113,
+          293
+        ],
+        "thresholds": [
+          [
+            0.809257778,
+            45.199332778
+          ],
+          [
+            0.824652778,
+            45.194568889
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      0.815277778,
+      45.197499722
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.runwaygrass.008000": {
+      "$ref": "style.line.runwaygrass.008000"
+    }
+  },
+  "vsmr_groups": []
+}

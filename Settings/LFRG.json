@@ -1,0 +1,58 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFRG AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFRG",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "12",
+          "30"
+        ],
+        "headings": [
+          117,
+          297
+        ],
+        "thresholds": [
+          [
+            0.144224722,
+            49.368680833
+          ],
+          [
+            0.164805833,
+            49.361782778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      0.159999722,
+      49.363332778
+    ]
+  },
+  "styles": {
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}
