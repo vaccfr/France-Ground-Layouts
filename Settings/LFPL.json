@@ -1,0 +1,87 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFPL AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFPL",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "08R",
+          "26L"
+        ],
+        "headings": [
+          80,
+          260
+        ],
+        "thresholds": [
+          [
+            2.619888889,
+            48.819082778
+          ],
+          [
+            2.630432778,
+            48.820110833
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "08",
+          "26"
+        ],
+        "headings": [
+          80,
+          260
+        ],
+        "thresholds": [
+          [
+            2.621325,
+            48.820588889
+          ],
+          [
+            2.630741944,
+            48.821502778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.622777778,
+      48.821943889
+    ]
+  },
+  "styles": {
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "polygon.hardsurface2.595e5b": {
+      "$ref": "style.polygon.hardsurface2.595e5b"
+    },
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.runwayconcrete.555555": {
+      "$ref": "style.polygon.runwayconcrete.555555"
+    },
+    "polygon.hardsurface3.8a807f": {
+      "$ref": "style.polygon.hardsurface3.8a807f"
+    }
+  },
+  "vsmr_groups": []
+}

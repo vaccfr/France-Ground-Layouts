@@ -1,0 +1,55 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFLW AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFLW",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "15",
+          "33"
+        ],
+        "headings": [
+          149,
+          329
+        ],
+        "thresholds": [
+          [
+            2.416593889,
+            44.897735833
+          ],
+          [
+            2.427399722,
+            44.884507778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.416666944,
+      44.8975
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    }
+  },
+  "vsmr_groups": []
+}

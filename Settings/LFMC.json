@@ -1,0 +1,75 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFMC AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFMC",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "13",
+          "31"
+        ],
+        "headings": [
+          128,
+          308
+        ],
+        "thresholds": [
+          [
+            6.382796944,
+            43.387080833
+          ],
+          [
+            6.393066944,
+            43.380913889
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "09",
+          "27"
+        ],
+        "headings": [
+          86,
+          266
+        ],
+        "thresholds": [
+          [
+            6.378696944,
+            43.384555833
+          ],
+          [
+            6.388468889,
+            43.384705833
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      6.386943889,
+      43.384721944
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    }
+  },
+  "vsmr_groups": []
+}

@@ -1,0 +1,158 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFOQ AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFOQ",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "12R",
+          "30L"
+        ],
+        "headings": [
+          120,
+          300
+        ],
+        "thresholds": [
+          [
+            1.200671944,
+            47.680477778
+          ],
+          [
+            1.20785,
+            47.677521944
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "12L",
+          "30R"
+        ],
+        "headings": [
+          121,
+          301
+        ],
+        "thresholds": [
+          [
+            1.201916944,
+            47.680810833
+          ],
+          [
+            1.210052778,
+            47.6775
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "12",
+          "30"
+        ],
+        "headings": [
+          121,
+          301
+        ],
+        "thresholds": [
+          [
+            1.201977778,
+            47.681405833
+          ],
+          [
+            1.215591944,
+            47.675775
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "02R",
+          "20L"
+        ],
+        "headings": [
+          22,
+          202
+        ],
+        "thresholds": [
+          [
+            1.205052778,
+            47.670327778
+          ],
+          [
+            1.209396944,
+            47.677302778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "02L",
+          "20R"
+        ],
+        "headings": [
+          21,
+          201
+        ],
+        "thresholds": [
+          [
+            1.204338889,
+            47.670532778
+          ],
+          [
+            1.208546944,
+            47.677605833
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "02",
+          "20"
+        ],
+        "headings": [
+          21,
+          201
+        ],
+        "thresholds": [
+          [
+            1.2027,
+            47.670902778
+          ],
+          [
+            1.203966944,
+            47.673002778
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      1.205832778,
+      47.679721944
+    ]
+  },
+  "styles": {
+    "line.runwayconcrete.555555": {
+      "$ref": "style.line.runwayconcrete.555555"
+    },
+    "line.runwaygrass.008000": {
+      "$ref": "style.line.runwaygrass.008000"
+    }
+  },
+  "vsmr_groups": []
+}

@@ -1,0 +1,123 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFRD AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFRD",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "17",
+          "35"
+        ],
+        "headings": [
+          170,
+          350
+        ],
+        "thresholds": [
+          [
+            -2.082682778,
+            48.598060833
+          ],
+          [
+            -2.077555833,
+            48.578627778
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "12",
+          "30"
+        ],
+        "headings": [
+          115,
+          295
+        ],
+        "thresholds": [
+          [
+            -2.088946944,
+            48.590499722
+          ],
+          [
+            -2.073013889,
+            48.585546944
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      -2.08,
+      48.587777778
+    ]
+  },
+  "styles": {
+    "polygon.grassurface.00512f": {
+      "$ref": "style.polygon.grassurface.00512f"
+    },
+    "polygon.terrain1.574242": {
+      "$ref": "style.polygon.terrain1.574242"
+    },
+    "polygon.hardsurface2.595e5b": {
+      "$ref": "style.polygon.hardsurface2.595e5b"
+    },
+    "polygon.hardsurface1.969393": {
+      "$ref": "style.polygon.hardsurface1.969393"
+    },
+    "polygon.runwaygrass.008000": {
+      "$ref": "style.polygon.runwaygrass.008000"
+    },
+    "polygon.runwayconcrete.555555": {
+      "$ref": "style.polygon.runwayconcrete.555555"
+    },
+    "polygon.building.394446": {
+      "$ref": "style.polygon.building.394446"
+    },
+    "polygon.runwayborder.808080": {
+      "$ref": "style.polygon.runwayborder.808080"
+    },
+    "line.taxiway.c0b631": {
+      "$ref": "style.line.taxiway.c0b631"
+    },
+    "line.runwayborder.808080": {
+      "$ref": "style.line.runwayborder.808080"
+    },
+    "line.aorapproach5.7e7e7e": {
+      "name": "Ao Rapproach 5",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LINE_AORAPPROACH5",
+        "stroke-opacity": 1,
+        "stroke-width": 1,
+        "palette-overrides": {
+          "light": {
+            "stroke": "COLOR_AoRapproach5"
+          }
+        }
+      }
+    },
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

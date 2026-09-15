@@ -1,0 +1,78 @@
+{
+  "type": "FeatureCollection",
+  "name": "LFOX AVISO",
+  "metadata": {
+    "schema": "vSMR AVISO",
+    "schema_version": 2,
+    "geometry_mode": "shared",
+    "airport": "LFOX",
+    "coordinate_reference_system": "WGS84",
+    "coordinate_order": "longitude, latitude",
+    "default_color_palette": "dark",
+    "color_palettes": [
+      "dark",
+      "light"
+    ],
+    "background_colors": {
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
+    },
+    "runways": [
+      {
+        "ends": [
+          "06L",
+          "24R"
+        ],
+        "headings": [
+          56,
+          236
+        ],
+        "thresholds": [
+          [
+            2.068768889,
+            48.378805833
+          ],
+          [
+            2.078568889,
+            48.383099722
+          ]
+        ]
+      },
+      {
+        "ends": [
+          "06",
+          "24"
+        ],
+        "headings": [
+          56,
+          236
+        ],
+        "thresholds": [
+          [
+            2.072596944,
+            48.379007778
+          ],
+          [
+            2.080507778,
+            48.382474722
+          ]
+        ]
+      }
+    ],
+    "saved_active_runways": [],
+    "saved_active_airport_modes": [],
+    "airport_reference": [
+      2.073888889,
+      48.381110833
+    ]
+  },
+  "styles": {
+    "label.gates": {
+      "$ref": "style.label.gates"
+    },
+    "label.taxiways": {
+      "$ref": "style.label.taxiways"
+    }
+  },
+  "vsmr_groups": []
+}

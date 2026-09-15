@@ -36,3 +36,25 @@ A map displaying the available, work-in-progress and planned airports is availab
 - **Intermediate holding points** must be defined as dashed lines, using the color **COLOR_TaxiwayOrange**
   
 If you have any questions or issues regarding the creation or updating of an AVISO, please visit the French vACC Discord server.
+
+
+## Optional vSMR AVISO conversion
+
+GNG, KMZ and Colours.sct remain unchanged. LFPO settings omit the obsolete
+background rectangle from generated GeoJSON and set the Real background colour.
+The converter reads them without rewriting, stripping or reorganizing content.
+Customize vSMR only through Settings/, including Settings/Colours.sct for colors.
+
+On Windows, double-click **Script/Convert AVISO.cmd** and choose:
+
+1. **Local** (default): use this checkout's GNG, KMZ and Colours.sct.
+2. **Official GitHub**: download original source from vaccfr/France-Ground-Layouts.
+
+Python 3.10+ is required. Conversion writes GeoJSON into `GeoJSON/`. No reports or
+summaries are produced. An explicit GitHub failure is reported; it does not
+silently switch to different source data.
+
+`Settings/` holds runtime styles, groups, zoom levels and airport settings. Colors
+are customized in Settings/Colours.sct over the native Colours.sct. Text/background defaults are shared; unrelated
+geometry roles remain independently editable even when RGB values match.
+See [converter usage](Script/README.md) and [runtime settings](Settings/README.md).
