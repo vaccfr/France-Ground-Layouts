@@ -43,3 +43,15 @@ Make appearance changes here, not in the native source files. Geometry and label
 features explicitly assigned to toggle groups. Ordinary feature IDs are an
 output detail, not a mapping that needs manual maintenance. Official GitHub
 layouts may differ from the customized local ones.
+
+## Optional GNG supplements
+
+`additional_gng` in an airport JSON lists GNG `.txt` files in this Settings folder.
+They are imported only when the airport exists in the selected pack. A native
+GNG file with the same airport and filename takes precedence over a supplement.
+No source files are rewritten, and no KMZ is read.
+
+LFPG's two supplements retain the East/West arrow paths from the existing vSMR
+GeoJSON because the official GNG files omit them. They use ordinary GNG line
+syntax and the existing `file:` group assignments. They contain geometry only;
+colors and other rendering settings continue to use the airport styles.

@@ -171,6 +171,26 @@ def palette_colors(native=None):
     return colors
 
 
+def additional_gng(code):
+    """Optional GNG supplements live with airport settings, never in the pack."""
+    folder = ROOT / 'Settings'
+    settings = folder / (code + '.json')
+    if not settings.is_file():
+        return {}
+    names = json.loads(settings.read_text(encoding='utf-8-sig')).get('additional_gng', [])
+    if not isinstance(names, list) or not all(isinstance(name, str) for name in names):
+        raise ValueError(code + ': additional_gng must be a list of GNG filenames')
+    result = {}
+    for name in names:
+        path = folder / name
+        if path.resolve().parent != folder.resolve() or not name.startswith(code + ' ') or path.suffix.lower() != '.txt':
+            raise ValueError(code + ': additional GNG must be an airport TXT file inside Settings')
+        if name in result:
+            raise ValueError(code + ': duplicate additional GNG filename')
+        result[name] = parse_gng('Settings/' + name, path.read_bytes())
+    return result
+
+
 def load_source(path):
     airports = collections.defaultdict(list)
     inventory, gng, extras = set(), {}, {}
@@ -200,6 +220,11 @@ def load_source(path):
                 gng[file] = (code, parse_gng(file, data))
             elif file == 'Colours.sct':
                 extras['colors'] = read_colors(data)
+        published = {(code, Path(file).name) for file, (code, _) in gng.items()}
+        for code in sorted({code for code, _ in published}):
+            for name, records in additional_gng(code).items():
+                if (code, name) not in published:
+                    gng['Settings/' + name] = (code, records)
         airports = assemble_sources(gng)
     if not gng or not extras.get('colors'):
         raise ValueError('Expected GNG/ and a valid Colours.sct')
@@ -273,6 +298,7 @@ def load_settings(colors=None):
         if not re.fullmatch('[A-Z]{4}', airport.stem):
             continue
         document = json.loads(airport.read_text(encoding='utf-8-sig'))
+        document.pop('additional_gng', None)
         overrides = document.pop('features', {})
         if not isinstance(overrides, dict):
             raise ValueError(str(airport) + ': features must be a group-assignment object')

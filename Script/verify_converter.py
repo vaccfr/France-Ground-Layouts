@@ -74,6 +74,11 @@ def main():
         native = collections.defaultdict(list)
         for path in (root / 'GNG').rglob('*.txt'):
             native[path.parent.name].extend(c.parse_gng(path.relative_to(root).as_posix(), path.read_bytes()))
+        for code in list(native):
+            published = {Path(r['file']).name for r in native[code]}
+            for name, records in c.additional_gng(code).items():
+                if name not in published:
+                    native[code].extend(records)
         def geometry_counts(records):
             return collections.Counter(c.packed(r['geometry']) for r in records)
         for code, records in source['airports'].items():
@@ -83,6 +88,27 @@ def main():
             assert collections.Counter((r['name'], c.packed(r['geometry'])) for r in records if r['kind'] == 'label') == collections.Counter((r['name'], c.packed(r['geometry'])) for r in native[code] if r['kind'] == 'label'), code
             used = {g for f in output['features'] for g in f['properties']['vsmr_group_ids']}
             assert {g['id'] for g in output['vsmr_groups']} == used
+
+        lfpg = json.loads(actual_files['LFPG.geojson'])
+        arrows = [f for f in lfpg['features'] if f['properties']['geometry_role'] == 'directional_arrows']
+        assert len(arrows) == 6
+        for group in ('ground-layout-east', 'ground-layout-west'):
+            grouped = [f for f in arrows if group in f['properties']['vsmr_group_ids']]
+            assert len(grouped) == 3
+            assert {f['properties']['style_id'].rsplit('.', 1)[-1] for f in grouped} == {'centerline', 'brown', 'green'}
+        with patch.object(c, 'additional_gng', return_value={}):
+            plain_source = c.load_source(root)
+        for code, records in source['airports'].items():
+            if code != 'LFPG':
+                assert records == plain_source['airports'][code]
+        assert len(source['airports']['LFPG']) == len(plain_source['airports']['LFPG']) + 6
+        assert c.additional_gng('ZZZZ') == {}
+        with patch.object(Path, 'read_text', return_value='{"additional_gng": ["../LFPG outside.txt"]}'):
+            try:
+                c.additional_gng('LFPG')
+                raise AssertionError('Escaping supplemental GNG path accepted')
+            except ValueError:
+                pass
 
         # No file from KMZ may be opened, even when present beside the input.
         read_bytes = Path.read_bytes
