@@ -7,6 +7,7 @@
 #define TEXT_HALO_COLOR                                         0         ; #000000
 
 ; Dark palette
+#define DARK_LFPO_POLYGON_TERRAIN4                              126       ; #7E0000
 #define DARK_LFPO_POLYGON_PARKPOS                               3943714   ; #222D3C
 #define DARK_LINE_AORAPPROACH5                                  8289918   ; #7E7E7E
 #define DARK_LINE_APRONMARKING                                  6710886   ; #666666
@@ -78,6 +79,7 @@
 #define DARK_VSMR_GROUPS_ACCENT                                 3784148   ; #D4BD39
 
 ; Light overrides
+#define LIGHT_LFPO_POLYGON_TERRAIN4                             126       ; #7E0000
 #define LIGHT_LFBO_LINE_TAXIWAYPURPLE                           8388736   ; #800080
 #define LIGHT_LFML_LINE_HARDSURFACE5                            3258048   ; #C0B631
 #define LIGHT_LFML_LINE_LANDMARK6                               11776947  ; #B3B3B3
@@ -183,4 +185,4 @@
 #define REAL_LFPO_POLYGON_RUNWAYMARKING                         11776947  ; #B3B3B3
 #define REAL_LFPO_POLYGON_TAXIWAYORANGE                         28108     ; #CC6D00
 #define REAL_LFPO_POLYGON_TERRAIN3                              2434344   ; #282525
-#define REAL_LFPO_POLYGON_TERRAIN4                              3156627   ; #932A30
+#define REAL_LFPO_POLYGON_TERRAIN4                              126       ; #7E0000
