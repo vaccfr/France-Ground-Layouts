@@ -410,7 +410,7 @@
         "text-halo-color": "TEXT_HALO_COLOR",
         "text-halo-width": 1,
         "text-anchor": "center",
-        "zoomLevel": 10
+        "zoomLevel": 9
       }
     },
     "label.taxiways": {

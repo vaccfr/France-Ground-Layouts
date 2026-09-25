@@ -222,11 +222,11 @@
       "layer": "Terrain",
       "object_type": "Area",
       "paint": {
-        "fill": "DARK_POLYGON_TERRAIN4",
+        "fill": "DARK_LFPO_POLYGON_TERRAIN4",
         "fill-opacity": 1,
         "palette-overrides": {
           "light": {
-            "fill": "LIGHT_POLYGON_TERRAIN4"
+            "fill": "LIGHT_LFPO_POLYGON_TERRAIN4"
           },
           "real": {
             "fill": "REAL_LFPO_POLYGON_TERRAIN4"
