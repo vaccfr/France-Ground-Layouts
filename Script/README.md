@@ -47,10 +47,7 @@ Only airports with GNG records generate output.
 Feature IDs are deterministic output details and are never written back.
 Optional group assignments use `file:<GNG filename without extension>` or an
 exact feature ID. Groups with no assigned output feature are hidden; objects
-available only in KMZ are not imported. Optional GNG supplements listed in
-Settings/<ICAO>.json under `additional_gng` are loaded from Settings. LFPG uses
-two such files to retain its existing East/West arrows without modifying the
-official pack. Native files with the same airport and filename take precedence.
+available only in KMZ are not imported.
 Conversion writes only GeoJSON; source/settings directories are rejected as
 output destinations. All changes to appearance belong in Settings/.
 

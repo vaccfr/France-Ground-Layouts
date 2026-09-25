@@ -489,10 +489,6 @@
       "accent": "DARK_VSMR_GROUPS_ACCENT"
     }
   ],
-  "additional_gng": [
-    "LFPG Groundlayout East Arrows.txt",
-    "LFPG Groundlayout West Arrows.txt"
-  ],
   "features": {
     "file:LFPG Groundlayout East Arrows": {
       "vsmr_group_ids": [
