@@ -84,6 +84,18 @@ def main():
             used = {g for f in output['features'] for g in f['properties']['vsmr_group_ids']}
             assert {g['id'] for g in output['vsmr_groups']} == used
 
+        # LFPG arrow groups must come from the official GNG files.
+        lfpg = json.loads(actual_files['LFPG.geojson'])
+        arrows = [f for f in lfpg['features'] if f['properties']['geometry_role'] == 'directional_arrows']
+        assert len(arrows) == 6
+        for direction in ('east', 'west'):
+            group = 'ground-layout-' + direction
+            grouped = [f for f in arrows if group in f['properties']['vsmr_group_ids']]
+            assert len(grouped) == 3
+            assert {f['properties']['style_id'].rsplit('.', 1)[-1] for f in grouped} == {'centerline', 'brown', 'green'}
+            filename = 'GNG/LFFF/LFPG/LFPG Groundlayout ' + direction.title() + ' Arrows.txt'
+            assert sum(r['file'] == filename for r in source['airports']['LFPG']) == 3
+
         # No file from KMZ may be opened, even when present beside the input.
         read_bytes = Path.read_bytes
         def guarded_read(path):
