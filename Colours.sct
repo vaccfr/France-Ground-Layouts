@@ -85,3 +85,7 @@
 #define COLOR_VFR-Route        0
 #define COLOR_Vectors    5135955
 #define COLOR_Water      8404992
+; Additional ground marking roles
+#define COLOR_StandEntry         7232030
+#define COLOR_SurfaceMarking     6710886
+#define COLOR_TaxiwayRed         230
