@@ -26,7 +26,9 @@ def main():
     changed = c.load_settings(dict(colors, BACKGROUND_COLOR='#123456'))
     for code, recipe in changed['recipes'].items():
         for mode, color in recipe['document']['metadata']['background_colors'].items():
-            assert color == ({('LFPG', 'real'): '#6F6F6F', ('LFPO', 'real'): '#6C6A68'}.get((code, mode), '#123456'))
+            assert color == ({('LFPG', 'real'): '#6F6F6F', ('LFPO', 'real'): '#6C6A68',
+                              ('LFBO', 'real'): '#434C51', ('LFLL', 'real'): '#50595F',
+                              ('LFSB', 'real'): '#252B37'}.get((code, mode), '#123456'))
     with patch.object(c, 'github_source', side_effect=AssertionError('Local mode contacted GitHub')):
         assert c.choose_source() == source
     with patch.object(c, 'github_source', return_value=source), patch.object(c, 'local_source', side_effect=AssertionError('GitHub mode used local source')):

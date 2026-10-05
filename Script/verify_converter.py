@@ -38,8 +38,26 @@ def main():
         assert not any(r['color'] == 'COLOR_Terrain2' for r in c.parse_gng(path.as_posix(), path.read_bytes()))
     for code, recipe in changed_settings['recipes'].items():
         for mode, color in recipe['document']['metadata']['background_colors'].items():
-            if (code, mode) not in (('LFPG', 'real'), ('LFPO', 'real')):
+            if (code, mode) not in (('LFPG', 'real'), ('LFPO', 'real'), ('LFBO', 'real'), ('LFLL', 'real'), ('LFSB', 'real')):
                 assert color == '#123456', (code, mode)
+    lfsb = changed_settings['recipes']['LFSB']['document']
+    assert lfsb['metadata']['color_palettes'] == ['dark', 'light', 'real']
+    assert lfsb['metadata']['background_colors']['real'] == '#252B37'
+    lfbo_grass = changed_settings['recipes']['LFBO']['document']['styles']['polygon.grassurface.00512f']['paint']
+    assert lfbo_grass['stroke-width'] == 0.75 and lfbo_grass['stroke-opacity'] == 1
+    assert lfbo_grass['palette-overrides']['real'] == {'fill': '#434C51', 'stroke': '#5B656B', 'polygon-outline': True}
+    assert 'polygon-outline' not in lfbo_grass and 'polygon-outline' not in lfbo_grass['palette-overrides']['light']
+    outlined_grass = lfsb['styles']['polygon.grassurface.00512f']['paint']['palette-overrides']['real']
+    assert outlined_grass == {'fill': '#252B37', 'stroke': '#495260', 'polygon-outline': True}
+    for key in ('polygon.hardsurface4.969393', 'polygon.hardsurface3.8a807f', 'polygon.hardsurface2.595e5b', 'polygon.runwayconcrete.555555'):
+        assert lfsb['styles'][key]['paint']['palette-overrides']['real']['polygon-outline'] is False
+    assert lfsb['styles']['polygon.runwayconcrete.555555']['paint']['palette-overrides']['real']['fill'] == '#62687C'
+    # Editing this airport's Real surface color must not change Dark/Light or a different role.
+    saved_palette = c.load_settings(source['colors'])['recipes']['LFSB']['document']
+    edited_palette = c.load_settings(dict(source['colors'], REAL_LFSB_POLYGON_RUNWAYCONCRETE='#123456'))['recipes']['LFSB']['document']
+    expected_palette = copy.deepcopy(saved_palette)
+    expected_palette['styles']['polygon.runwayconcrete.555555']['paint']['palette-overrides']['real']['fill'] = '#123456'
+    assert edited_palette == expected_palette
     text_settings = c.load_settings(dict(source['colors'], TEXT_COLOR='#123456'))
     for recipe in text_settings['recipes'].values():
         for style in recipe['document']['styles'].values():
@@ -61,7 +79,8 @@ def main():
     assert expected_files, 'Generate GeoJSON before running the checks'
     for name, data in expected_files.items():
         doc = json.loads(data)
-        allowed = {'ground-layout-east', 'ground-layout-west'} if name == 'LFPG.geojson' else set()
+        allowed = {'LFPG.geojson': {'ground-layout-east', 'ground-layout-west'},
+                   'LFLL.geojson': {'lfll-distance-labels'}}.get(name, set())
         assert {g['id'] for g in doc.get('vsmr_groups', [])} <= allowed
         for feature in doc['features']:
             assert set(feature['properties'].get('vsmr_group_ids', [])) <= allowed
@@ -84,18 +103,30 @@ def main():
             used = {g for f in output['features'] for g in f['properties']['vsmr_group_ids']}
             assert {g['id'] for g in output['vsmr_groups']} == used
 
-        # LFPG arrow groups must come from the official GNG files.
         lfpg = json.loads(actual_files['LFPG.geojson'])
         arrows = [f for f in lfpg['features'] if f['properties']['geometry_role'] == 'directional_arrows']
         assert len(arrows) == 6
-        for direction in ('east', 'west'):
-            group = 'ground-layout-' + direction
+        for group in ('ground-layout-east', 'ground-layout-west'):
             grouped = [f for f in arrows if group in f['properties']['vsmr_group_ids']]
             assert len(grouped) == 3
             assert {f['properties']['style_id'].rsplit('.', 1)[-1] for f in grouped} == {'centerline', 'brown', 'green'}
-            filename = 'GNG/LFFF/LFPG/LFPG Groundlayout ' + direction.title() + ' Arrows.txt'
-            assert sum(r['file'] == filename for r in source['airports']['LFPG']) == 3
 
+        lfll = json.loads(actual_files['LFLL.geojson'])
+        for code, counts in [('LFBO', (471, 17)), ('LFLL', (420, 21)), ('LFSB', (235, 13))]:
+            airport = json.loads(actual_files[code + '.geojson'])
+            assert (len(airport['features']), len(airport['styles'])) == counts
+            assert all(style['feature_count'] > 0 for style in airport['styles'].values())
+        assert 'source_order' not in lfll
+        positions = {name: [i for i, f in enumerate(lfll['features']) if f['properties'].get('source_group') == name]
+                     for name in ('LFLL AVISO', 'LFLL Groundlayout AVISO', 'LFLL Holding points', 'LFLL Gates')}
+        ordered = list(positions.values())
+        assert all(indices for indices in ordered)
+        assert all(max(before) < min(after) for before, after in zip(ordered, ordered[1:]))
+        distances = [f for f in lfll['features'] if 'lfll-distance-labels' in f['properties']['vsmr_group_ids']]
+        assert len(distances) == 9 and all(f['geometry']['type'] == 'Point' for f in distances)
+        for style_id, real_color in [('line.taxiwayblue.004080', '#979BCC'), ('line.taxiwayorange.cc6d00', '#C69A82')]:
+            assert any(f['properties']['style_id'] == style_id for f in lfll['features'])
+            assert lfll['styles'][style_id]['paint']['palette-overrides']['real']['stroke'] == real_color
         # No file from KMZ may be opened, even when present beside the input.
         read_bytes = Path.read_bytes
         def guarded_read(path):

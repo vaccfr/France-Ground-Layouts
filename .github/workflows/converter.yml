@@ -20,3 +20,4 @@ jobs:
           python-version: ${{ matrix.python }}
       - run: python Script/verify_converter.py
       - run: python Script/verify_upstream.py
+      - run: python Script/verify_kmz_geometry.py
