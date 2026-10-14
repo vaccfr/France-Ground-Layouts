@@ -11,11 +11,13 @@
     "default_color_palette": "dark",
     "color_palettes": [
       "dark",
-      "light"
+      "light",
+      "real"
     ],
     "background_colors": {
       "dark": "BACKGROUND_COLOR",
-      "light": "BACKGROUND_COLOR"
+      "light": "BACKGROUND_COLOR",
+      "real": "REAL_LFSB_BACKGROUND_COLOR"
     },
     "runways": [
       {
@@ -68,43 +70,146 @@
   },
   "styles": {
     "polygon.grassurface.00512f": {
-      "$ref": "style.polygon.grassurface.00512f"
+      "$ref": "style.polygon.grassurface.00512f",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_GRASSURFACE",
+            "stroke": "REAL_LFSB_POLYGON_GRASSURFACE_OUTLINE",
+            "polygon-outline": true
+          }
+        }
+      }
     },
     "polygon.hardsurface4.969393": {
-      "$ref": "style.polygon.hardsurface4.969393"
+      "$ref": "style.polygon.hardsurface4.969393",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_HARDSURFACE4",
+            "stroke": "REAL_LFSB_POLYGON_HARDSURFACE4_OUTLINE",
+            "polygon-outline": false
+          }
+        }
+      }
     },
     "polygon.hardsurface3.8a807f": {
-      "$ref": "style.polygon.hardsurface3.8a807f"
+      "$ref": "style.polygon.hardsurface3.8a807f",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_HARDSURFACE3",
+            "stroke": "REAL_LFSB_POLYGON_HARDSURFACE3_OUTLINE",
+            "polygon-outline": false
+          }
+        }
+      }
     },
     "polygon.hardsurface2.595e5b": {
-      "$ref": "style.polygon.hardsurface2.595e5b"
+      "$ref": "style.polygon.hardsurface2.595e5b",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_HARDSURFACE2",
+            "stroke": "REAL_LFSB_POLYGON_HARDSURFACE2_OUTLINE",
+            "polygon-outline": false
+          }
+        }
+      }
     },
     "polygon.runwayconcrete.555555": {
-      "$ref": "style.polygon.runwayconcrete.555555"
+      "$ref": "style.polygon.runwayconcrete.555555",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_RUNWAYCONCRETE",
+            "stroke": "REAL_LFSB_POLYGON_RUNWAYCONCRETE_OUTLINE",
+            "polygon-outline": false
+          }
+        }
+      }
     },
     "polygon.building.394446": {
-      "$ref": "style.polygon.building.394446"
+      "$ref": "style.polygon.building.394446",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_BUILDING"
+          }
+        }
+      }
     },
     "polygon.stopbar.7e0000": {
-      "$ref": "style.polygon.stopbar.7e0000"
+      "$ref": "style.polygon.stopbar.7e0000",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_STOPBAR"
+          }
+        }
+      }
     },
     "polygon.taxiwayorange.cc6d00": {
-      "$ref": "style.polygon.taxiwayorange.cc6d00"
+      "$ref": "style.polygon.taxiwayorange.cc6d00",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFSB_POLYGON_TAXIWAYORANGE"
+          }
+        }
+      }
     },
     "line.taxiway.c0b631": {
-      "$ref": "style.line.taxiway.c0b631"
+      "$ref": "style.line.taxiway.c0b631",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFSB_LINE_TAXIWAY"
+          }
+        }
+      }
     },
     "line.taxiwayblue.004080": {
-      "$ref": "style.line.taxiwayblue.004080"
+      "$ref": "style.line.taxiwayblue.004080",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFSB_LINE_TAXIWAYBLUE"
+          }
+        }
+      }
     },
     "line.taxiwayorange.cc6d00": {
-      "$ref": "style.line.taxiwayorange.cc6d00"
+      "$ref": "style.line.taxiwayorange.cc6d00",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFSB_LINE_TAXIWAYORANGE"
+          }
+        }
+      }
     },
     "label.gates": {
-      "$ref": "style.label.gates"
+      "$ref": "style.label.gates",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "text-color": "REAL_LFSB_LABEL_GATES",
+            "text-halo-color": "REAL_LFSB_BACKGROUND_COLOR"
+          }
+        }
+      }
     },
     "label.taxiways": {
-      "$ref": "style.label.taxiways"
+      "$ref": "style.label.taxiways",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "text-color": "REAL_LFSB_LABEL_TAXIWAYS",
+            "text-halo-color": "REAL_LFSB_BACKGROUND_COLOR"
+          }
+        }
+      }
     }
   },
   "vsmr_groups": []

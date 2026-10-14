@@ -249,3 +249,24 @@
 #define COLOR_StandEntry         7232030
 #define COLOR_SurfaceMarking     6710886
 #define COLOR_TaxiwayRed         230
+
+; LFSB airport palettes
+#define REAL_LFSB_BACKGROUND_COLOR                                 3615525    ; #252B37
+#define REAL_LFSB_POLYGON_GRASSURFACE                              3615525    ; #252B37
+#define REAL_LFSB_POLYGON_GRASSURFACE_OUTLINE                      6312521    ; #495260
+#define REAL_LFSB_POLYGON_HARDSURFACE4                             4207404    ; #2C3340
+#define REAL_LFSB_POLYGON_HARDSURFACE4_OUTLINE                     6772816    ; #505867
+#define REAL_LFSB_POLYGON_HARDSURFACE3                             4404783    ; #2F3643
+#define REAL_LFSB_POLYGON_HARDSURFACE3_OUTLINE                     6772816    ; #505867
+#define REAL_LFSB_POLYGON_HARDSURFACE2                             4602162    ; #323946
+#define REAL_LFSB_POLYGON_HARDSURFACE2_OUTLINE                     7036245    ; #555D6B
+#define REAL_LFSB_POLYGON_RUNWAYCONCRETE                           8153186    ; #62687C
+#define REAL_LFSB_POLYGON_RUNWAYCONCRETE_OUTLINE                   9272437    ; #757C8D
+#define REAL_LFSB_POLYGON_BUILDING                                 8416613    ; #656D80
+#define REAL_LFSB_POLYGON_STOPBAR                                  5792430    ; #AE6258
+#define REAL_LFSB_POLYGON_TAXIWAYORANGE                            5602216    ; #A87B55
+#define REAL_LFSB_LINE_TAXIWAY                                     5207671    ; #77764F
+#define REAL_LFSB_LINE_TAXIWAYBLUE                                 12159844   ; #648BB9
+#define REAL_LFSB_LINE_TAXIWAYORANGE                               5602216    ; #A87B55
+#define REAL_LFSB_LABEL_GATES                                      6991543    ; #B7AE6A
+#define REAL_LFSB_LABEL_TAXIWAYS                                   9150846    ; #7EA18B
