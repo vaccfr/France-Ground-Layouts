@@ -274,13 +274,17 @@ def load_settings(colors=None):
             continue
         document = json.loads(airport.read_text(encoding='utf-8-sig'))
         overrides = document.pop('features', {})
+        source_order = document.pop('source_order', [])
+        if (not isinstance(source_order, list) or any(not isinstance(name, str) for name in source_order)
+                or len(source_order) != len(set(source_order))):
+            raise ValueError(str(airport) + ': source_order must list unique GNG file stems')
         if not isinstance(overrides, dict):
             raise ValueError(str(airport) + ': features must be a group-assignment object')
         settings = resolve(document)
         for feature_id, options in overrides.items():
             if not isinstance(options, dict) or set(options) != {'vsmr_group_ids'}:
                 raise ValueError(str(airport) + ': only group assignments are allowed in features')
-        recipes[airport.stem] = dict(document=settings, overrides=overrides)
+        recipes[airport.stem] = dict(document=settings, overrides=overrides, source_order=source_order)
     return dict(recipes=recipes)
 
 
@@ -364,6 +368,10 @@ def convert_airport(code, recipe, records, colors):
     overrides = recipe['overrides']
     features = []
     excluded = set(doc['metadata'].pop('exclude_features', []))
+    order = {name: index for index, name in enumerate(recipe.get('source_order', []))}
+    if order:
+        # Stable ordering preserves native polygon order within each GNG file.
+        records = sorted(records, key=lambda item: order.get(Path(item['file']).stem, len(order)))
     for item in records:
         feature_id = item['source_id']
         if feature_id in excluded:

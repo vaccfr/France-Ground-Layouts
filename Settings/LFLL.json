@@ -11,11 +11,13 @@
     "default_color_palette": "dark",
     "color_palettes": [
       "dark",
-      "light"
+      "light",
+      "real"
     ],
     "background_colors": {
       "dark": "BACKGROUND_COLOR",
-      "light": "BACKGROUND_COLOR"
+      "light": "BACKGROUND_COLOR",
+      "real": "REAL_LFLL_BACKGROUND_COLOR"
     },
     "runways": [
       {
@@ -68,44 +70,330 @@
   },
   "styles": {
     "polygon.grassurface.00512f": {
-      "$ref": "style.polygon.grassurface.00512f"
+      "$ref": "style.polygon.grassurface.00512f",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_GRASSURFACE"
+          }
+        }
+      }
     },
     "polygon.terrain1.574242": {
-      "$ref": "style.polygon.terrain1.574242"
+      "$ref": "style.polygon.terrain1.574242",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_TERRAIN1"
+          }
+        }
+      }
     },
     "polygon.hardsurface3.8a807f": {
-      "$ref": "style.polygon.hardsurface3.8a807f"
+      "$ref": "style.polygon.hardsurface3.8a807f",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_HARDSURFACE3",
+            "stroke": "REAL_LFLL_POLYGON_HARDSURFACE3_OUTLINE",
+            "polygon-outline": true
+          }
+        },
+        "stroke-width": 0.75,
+        "stroke-opacity": 1
+      }
     },
     "polygon.hardsurface2.595e5b": {
-      "$ref": "style.polygon.hardsurface2.595e5b"
+      "$ref": "style.polygon.hardsurface2.595e5b",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_HARDSURFACE2",
+            "stroke": "REAL_LFLL_POLYGON_HARDSURFACE2_OUTLINE",
+            "polygon-outline": true
+          }
+        },
+        "stroke-width": 0.75,
+        "stroke-opacity": 1
+      }
     },
     "polygon.hardsurface4.969393": {
-      "$ref": "style.polygon.hardsurface4.969393"
+      "$ref": "style.polygon.hardsurface4.969393",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_HARDSURFACE4",
+            "stroke": "REAL_LFLL_POLYGON_HARDSURFACE4_OUTLINE",
+            "polygon-outline": true
+          }
+        },
+        "stroke-width": 0.75,
+        "stroke-opacity": 1
+      }
     },
     "polygon.runwayconcrete.555555": {
-      "$ref": "style.polygon.runwayconcrete.555555"
+      "$ref": "style.polygon.runwayconcrete.555555",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_RUNWAYCONCRETE",
+            "stroke": "REAL_LFLL_POLYGON_RUNWAYCONCRETE_OUTLINE",
+            "polygon-outline": true
+          }
+        },
+        "stroke-width": 0.75,
+        "stroke-opacity": 1
+      }
     },
     "polygon.building.394446": {
-      "$ref": "style.polygon.building.394446"
+      "$ref": "style.polygon.building.394446",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_BUILDING"
+          }
+        }
+      }
     },
     "polygon.stopbar.7e0000": {
-      "$ref": "style.polygon.stopbar.7e0000"
-    },
-    "polygon.taxiwayorange.cc6d00": {
-      "$ref": "style.polygon.taxiwayorange.cc6d00"
+      "$ref": "style.polygon.stopbar.7e0000",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_STOPBAR"
+          }
+        }
+      }
     },
     "polygon.closurearea.ff0000": {
-      "$ref": "style.polygon.closurearea.ff0000"
+      "$ref": "style.polygon.closurearea.ff0000",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_CLOSUREAREA"
+          }
+        }
+      }
     },
     "line.taxiway.c0b631": {
-      "$ref": "style.line.taxiway.c0b631"
+      "$ref": "style.line.taxiway.c0b631",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFLL_LINE_TAXIWAY"
+          }
+        }
+      }
     },
     "label.gates": {
-      "$ref": "style.label.gates"
+      "$ref": "style.label.gates",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "text-color": "REAL_LFLL_LABEL_GATES",
+            "text-halo-color": "REAL_LFLL_BACKGROUND_COLOR"
+          }
+        }
+      }
     },
     "label.taxiways": {
-      "$ref": "style.label.taxiways"
+      "$ref": "style.label.taxiways",
+      "paint": {
+        "palette-overrides": {
+          "real": {
+            "text-color": "REAL_LFLL_LABEL_TAXIWAYS",
+            "text-halo-color": "REAL_LFLL_BACKGROUND_COLOR"
+          }
+        }
+      }
+    },
+    "line.standentry": {
+      "name": "Stand entry lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LFLL_LINE_STANDENTRY",
+        "stroke-opacity": 1,
+        "stroke-width": 0.75,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "stroke": "REAL_LFLL_LINE_STANDENTRY"
+          }
+        }
+      }
+    },
+    "line.surfacemarking": {
+      "name": "Surface marking lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LFLL_LINE_SURFACEMARKING",
+        "stroke-opacity": 1,
+        "stroke-width": 0.75,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "stroke": "REAL_LFLL_LINE_SURFACEMARKING"
+          }
+        }
+      }
+    },
+    "line.taxiwayblue.004080": {
+      "name": "Blue taxiway guidance lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LFLL_LINE_TAXIWAYBLUE",
+        "stroke-opacity": 1,
+        "stroke-width": 0.75,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "stroke": "REAL_LFLL_LINE_TAXIWAYBLUE"
+          }
+        }
+      }
+    },
+    "line.taxiwayorange.cc6d00": {
+      "name": "Orange taxiway guidance lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LFLL_LINE_TAXIWAYORANGE",
+        "stroke-opacity": 1,
+        "stroke-width": 0.75,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "stroke": "REAL_LFLL_LINE_TAXIWAYORANGE"
+          }
+        }
+      }
+    },
+    "line.taxiwayred": {
+      "name": "Red taxiway guidance lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LFLL_LINE_TAXIWAYRED",
+        "stroke-opacity": 1,
+        "stroke-width": 0.75,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "stroke": "REAL_LFLL_LINE_TAXIWAYRED"
+          }
+        }
+      }
+    },
+    "polygon.surfacemarking": {
+      "name": "Surface markings",
+      "layer": "Surface markings",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LFLL_POLYGON_SURFACEMARKING",
+        "fill-opacity": 1,
+        "stroke": "DARK_LFLL_POLYGON_SURFACEMARKING",
+        "stroke-opacity": 1,
+        "stroke-width": 0.5,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_SURFACEMARKING",
+            "stroke": "REAL_LFLL_POLYGON_SURFACEMARKING"
+          }
+        }
+      }
+    },
+    "polygon.taxiwayred": {
+      "name": "Red taxiway markings",
+      "layer": "Surface markings",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LFLL_POLYGON_TAXIWAYRED",
+        "fill-opacity": 1,
+        "stroke": "DARK_LFLL_POLYGON_TAXIWAYRED",
+        "stroke-opacity": 1,
+        "stroke-width": 0.5,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "fill": "REAL_LFLL_POLYGON_TAXIWAYRED",
+            "stroke": "REAL_LFLL_POLYGON_TAXIWAYRED"
+          }
+        }
+      }
+    },
+    "label.tora.rwy17": {
+      "name": "Runway 17 TORA labels",
+      "layer": "Labels",
+      "object_type": "Label",
+      "paint": {
+        "text-anchor": "center",
+        "text-color": "TEXT_COLOR",
+        "text-font": "Arial",
+        "text-halo-color": "TEXT_HALO_COLOR",
+        "text-halo-width": 1,
+        "text-size": 10,
+        "zoomLevel": 9,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "text-color": "REAL_LFLL_LABEL_TORA_RWY17",
+            "text-halo-color": "REAL_LFLL_BACKGROUND_COLOR"
+          }
+        }
+      }
+    },
+    "label.tora.rwy35": {
+      "name": "Runway 35 TORA labels",
+      "layer": "Labels",
+      "object_type": "Label",
+      "paint": {
+        "text-anchor": "center",
+        "text-color": "TEXT_COLOR",
+        "text-font": "Arial",
+        "text-halo-color": "TEXT_HALO_COLOR",
+        "text-halo-width": 1,
+        "text-size": 10,
+        "zoomLevel": 9,
+        "palette-overrides": {
+          "light": {},
+          "real": {
+            "text-color": "REAL_LFLL_LABEL_TORA_RWY35",
+            "text-halo-color": "REAL_LFLL_BACKGROUND_COLOR"
+          }
+        }
+      }
     }
   },
-  "vsmr_groups": []
+  "vsmr_groups": [
+    {
+      "id": "lfll-distance-labels",
+      "name": "Runway distance labels",
+      "visible": true
+    }
+  ],
+  "features": {
+    "file:LFLL TORA RWY17": {
+      "vsmr_group_ids": [
+        "lfll-distance-labels"
+      ]
+    },
+    "file:LFLL TORA RWY35": {
+      "vsmr_group_ids": [
+        "lfll-distance-labels"
+      ]
+    }
+  },
+  "source_order": [
+    "LFLL AVISO",
+    "LFLL Groundlayout AVISO",
+    "LFLL Holding points",
+    "LFLL Gates",
+    "LFLL TORA RWY17",
+    "LFLL TORA RWY35",
+    "LFLL Taxiways"
+  ]
 }
