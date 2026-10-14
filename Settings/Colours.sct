@@ -186,3 +186,28 @@
 #define REAL_LFPO_POLYGON_TAXIWAYORANGE                         28108     ; #CC6D00
 #define REAL_LFPO_POLYGON_TERRAIN3                              2434344   ; #282525
 #define REAL_LFPO_POLYGON_TERRAIN4                              126       ; #7E0000
+
+; LFBO airport palettes
+#define REAL_LFBO_BACKGROUND_COLOR                                 5327939    ; #434C51
+#define REAL_LFBO_POLYGON_GRASSURFACE                              5327939    ; #434C51
+#define REAL_LFBO_POLYGON_HARDSURFACE4                             5327939    ; #434C51
+#define REAL_LFBO_POLYGON_HARDSURFACE4_OUTLINE                     7038299    ; #5B656B
+#define REAL_LFBO_POLYGON_TERRAIN1                                 5327939    ; #434C51
+#define REAL_LFBO_POLYGON_HARDSURFACE2                             5327939    ; #434C51
+#define REAL_LFBO_POLYGON_HARDSURFACE2_OUTLINE                     7038299    ; #5B656B
+#define REAL_LFBO_POLYGON_HARDSURFACE3                             5327939    ; #434C51
+#define REAL_LFBO_POLYGON_HARDSURFACE3_OUTLINE                     7038299    ; #5B656B
+#define REAL_LFBO_POLYGON_RUNWAYCONCRETE                           5327939    ; #434C51
+#define REAL_LFBO_POLYGON_RUNWAYCONCRETE_OUTLINE                   8551538    ; #727C82
+#define REAL_LFBO_POLYGON_BUILDING                                 8617588    ; #747E83
+#define REAL_LFBO_POLYGON_STOPBAR                                  4163722    ; #8A883F
+#define REAL_LFBO_LINE_TAXIWAY                                     4355954    ; #727742
+#define REAL_LFBO_LINE_TAXIWAYORANGE                               4367560    ; #C8A442
+#define REAL_LFBO_LINE_TAXIWAYBLUE                                 13288779   ; #4BC5CA
+#define REAL_LFBO_LINE_TAXIWAYPURPLE                               8617588    ; #747E83
+#define REAL_LFBO_LABEL_GATES                                      10986914   ; #A2A5A7
+#define REAL_LFBO_LABEL_TAXIWAYS                                   8880760    ; #788287
+#define REAL_LFBO_LABEL_GATES_NORTH                                13288779   ; #4BC5CA
+#define REAL_LFBO_LABEL_GATES_SOUTH                                4367560    ; #C8A442
+#define REAL_LFBO_LABEL_GATES_RUNWAYS                              8753609    ; #C99185
+#define REAL_LFBO_POLYGON_GRASSURFACE_OUTLINE                      7038299    ; #5B656B
