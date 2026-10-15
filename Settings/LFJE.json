@@ -7,14 +7,14 @@
     "airport": "LFJE",
     "coordinate_reference_system": "WGS84",
     "coordinate_order": "longitude, latitude",
-    "default_color_palette": "night",
+    "default_color_palette": "light",
     "color_palettes": [
-      "night",
-      "day"
+      "dark",
+      "light"
     ],
     "background_colors": {
-      "night": "BACKGROUND_COLOR",
-      "day": "BACKGROUND_COLOR"
+      "dark": "BACKGROUND_COLOR",
+      "light": "BACKGROUND_COLOR"
     },
     "geometry_mode": "shared"
   },

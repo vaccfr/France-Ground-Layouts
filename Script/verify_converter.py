@@ -27,6 +27,11 @@ def main():
         assert not re.search(r'"#[0-9A-Fa-f]{6}"', path.read_text(encoding='utf-8')), 'Palette literals belong in Settings/Colours.sct'
     changed_colors = dict(source['colors'], BACKGROUND_COLOR='#123456')
     changed_settings = c.load_settings(changed_colors)
+    for code, recipe in changed_settings['recipes'].items():
+        metadata = recipe['document']['metadata']
+        expected_palette = 'real' if code in ('LFPO', 'LFMN', 'LFML') else 'light'
+        assert metadata['default_color_palette'] == expected_palette, code
+        assert expected_palette in metadata['color_palettes'], code
     assert changed_settings['recipes']['LFPG']['document']['metadata']['background_colors']['dark'] == '#123456'
     assert changed_settings['recipes']['LFPG']['document']['metadata']['background_colors']['real'] == '#6F6F6F'
     lfpo = changed_settings['recipes']['LFPO']['document']
@@ -88,8 +93,9 @@ def main():
                 # Pin BOTH versions: any new geometry, source or output mismatch
                 # must fail. This keeps unrelated airport data out of this PR;
                 # LFST still receives all GNG/geometry checks below.
-                known = ('c03774b7ed9e8d3d04499b09807502738e3856dd1f3db6d1d59c8ba82268334f',
-                         'a2096408691010412ed1638cf76651947bfc87b269a6155e0a2daf70ced5a678')
+                # Both snapshots include the requested Light default metadata.
+                known = ('1c657d22d82f23592f6b1e9a1d10d5757a56e1b516ab6b2b053295b1451d832b',
+                         '1076faefdb688fd06a3e934810f4f6a0c8bffdc9dd18cc3ab2a7d71f99aef8a7')
                 assert name == 'LFST.geojson' and (
                     hashlib.sha256(expected).hexdigest(),
                     hashlib.sha256(actual).hexdigest()) == known, \
