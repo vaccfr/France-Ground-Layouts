@@ -8,7 +8,7 @@
     "airport": "LFBA",
     "coordinate_reference_system": "WGS84",
     "coordinate_order": "longitude, latitude",
-    "default_color_palette": "dark",
+    "default_color_palette": "light",
     "color_palettes": [
       "dark",
       "light"
