@@ -274,13 +274,17 @@ def load_settings(colors=None):
             continue
         document = json.loads(airport.read_text(encoding='utf-8-sig'))
         overrides = document.pop('features', {})
+        source_order = document.pop('source_order', [])
+        if (not isinstance(source_order, list) or any(not isinstance(name, str) for name in source_order)
+                or len(source_order) != len(set(source_order))):
+            raise ValueError(str(airport) + ': source_order must list unique GNG file stems')
         if not isinstance(overrides, dict):
             raise ValueError(str(airport) + ': features must be a group-assignment object')
         settings = resolve(document)
         for feature_id, options in overrides.items():
             if not isinstance(options, dict) or set(options) != {'vsmr_group_ids'}:
                 raise ValueError(str(airport) + ': only group assignments are allowed in features')
-        recipes[airport.stem] = dict(document=settings, overrides=overrides)
+        recipes[airport.stem] = dict(document=settings, overrides=overrides, source_order=source_order)
     return dict(recipes=recipes)
 
 
@@ -364,6 +368,10 @@ def convert_airport(code, recipe, records, colors):
     overrides = recipe['overrides']
     features = []
     excluded = set(doc['metadata'].pop('exclude_features', []))
+    order = {name: index for index, name in enumerate(recipe.get('source_order', []))}
+    if order:
+        # Stable ordering preserves native polygon order within each GNG file.
+        records = sorted(records, key=lambda item: order.get(Path(item['file']).stem, len(order)))
     for item in records:
         feature_id = item['source_id']
         if feature_id in excluded:
@@ -509,7 +517,7 @@ def run(source_path=None, output=None, source_mode='local'):
     for n, code in enumerate(all_codes, 1):
         recipe = saved['recipes'].get(code)
         if recipe is None:
-            recipe = dict(document=dict(type='FeatureCollection', name=code + ' AVISO', bbox=[], metadata=dict(schema='vSMR AVISO', schema_version=2, geometry_mode='shared', airport=code, coordinate_reference_system='WGS84', coordinate_order='longitude, latitude', default_color_palette='dark', color_palettes=['dark','light'], background_colors={'dark':source['colors']['BACKGROUND_COLOR'],'light':source['colors']['BACKGROUND_COLOR']}), styles={}, vsmr_groups=[]), overrides={})
+            recipe = dict(document=dict(type='FeatureCollection', name=code + ' AVISO', bbox=[], metadata=dict(schema='vSMR AVISO', schema_version=2, geometry_mode='shared', airport=code, coordinate_reference_system='WGS84', coordinate_order='longitude, latitude', default_color_palette='light', color_palettes=['dark','light'], background_colors={'dark':source['colors']['BACKGROUND_COLOR'],'light':source['colors']['BACKGROUND_COLOR']}), styles={}, vsmr_groups=[]), overrides={})
         doc = convert_airport(code, recipe, source['airports'][code], source['colors'])
         update_counts(doc)
         doc['metadata'].update(geometry_source='vaccfr/France-Ground-Layouts' if source_mode == 'github' else 'local GNG', geometry_source_url='https://github.com/vaccfr/France-Ground-Layouts' if source_mode == 'github' else '', geometry_license='GPL-3.0')
