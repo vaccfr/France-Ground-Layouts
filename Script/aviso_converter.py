@@ -64,25 +64,38 @@ def record(file, kind, color, name, geometry):
     return dict(file=file, kind=kind, color=color, name=name, geometry=geometry)
 
 
-def parse_gng(file, data):
+def parse_gng(file, data, allow_holes=False):
     text = decode(data)
-    records, polygon, color = [], [], None
+    records, polygon, rings, color = [], [], [], None
     lines = collections.defaultdict(list)
     stem = Path(file).stem
 
     def flush():
-        nonlocal polygon
+        nonlocal polygon, rings
         if polygon:
             if len(set(map(tuple, polygon))) < 3:
                 raise ValueError(f'{file}: polygon has fewer than three points')
             if polygon[-1] != polygon[0]:
                 polygon.append(polygon[0][:])
-            records.append(record(file, 'polygon', color, stem,
-                                  dict(type='Polygon', coordinates=[polygon])))
+            rings.append(polygon)
             polygon = []
+        if rings:
+            records.append(record(file, 'polygon', color, stem,
+                                  dict(type='Polygon', coordinates=rings)))
+            rings = []
 
     for number, raw in enumerate(text.splitlines(), 1):
         text = raw.split(';')[0].strip()
+        if allow_holes and text == '// HOLE':
+            if not polygon:
+                raise ValueError(f'{file}:{number}: hole without an outer ring')
+            if len(set(map(tuple, polygon))) < 3:
+                raise ValueError(f'{file}:{number}: polygon ring has fewer than three points')
+            if polygon[-1] != polygon[0]:
+                polygon.append(polygon[0][:])
+            rings.append(polygon)
+            polygon = []
+            continue
         if not text or text.startswith('//'):
             continue
         if re.fullmatch(COLOR_TOKEN, text):
@@ -275,16 +288,25 @@ def load_settings(colors=None):
         document = json.loads(airport.read_text(encoding='utf-8-sig'))
         overrides = document.pop('features', {})
         source_order = document.pop('source_order', [])
+        gng_overlays = document.pop('gng_overlays', [])
+        base_palettes = document.pop('base_palettes', None)
         if (not isinstance(source_order, list) or any(not isinstance(name, str) for name in source_order)
                 or len(source_order) != len(set(source_order))):
             raise ValueError(str(airport) + ': source_order must list unique GNG file stems')
         if not isinstance(overrides, dict):
             raise ValueError(str(airport) + ': features must be a group-assignment object')
+        if not isinstance(gng_overlays, list) or not all(isinstance(item, dict) for item in gng_overlays):
+            raise ValueError(str(airport) + ': gng_overlays must be a list of objects')
+        if base_palettes is not None and (not isinstance(base_palettes, list) or
+                any(palette not in ('dark', 'light', 'real') for palette in base_palettes)):
+            raise ValueError(str(airport) + ': invalid base_palettes')
         settings = resolve(document)
         for feature_id, options in overrides.items():
             if not isinstance(options, dict) or set(options) != {'vsmr_group_ids'}:
                 raise ValueError(str(airport) + ': only group assignments are allowed in features')
-        recipes[airport.stem] = dict(document=settings, overrides=overrides, source_order=source_order)
+        recipes[airport.stem] = dict(document=settings, overrides=overrides,
+                                    source_order=source_order, gng_overlays=gng_overlays,
+                                    base_palettes=base_palettes)
     return dict(recipes=recipes)
 
 
@@ -379,7 +401,7 @@ def convert_airport(code, recipe, records, colors):
         options = {}
         options.update(copy.deepcopy(overrides.get('file:' + Path(item['file']).stem, {})))
         options.update(copy.deepcopy(overrides.get(feature_id, {})))
-        style_id = infer_style(item, doc, colors)
+        style_id = item.get('overlay_style_id') or infer_style(item, doc, colors)
         style = doc['styles'][style_id]
         props = dict(airport=code, name=item['name'], layer=style['layer'], category=style['name'], object_type=style['object_type'],
                      style_id=style_id, source_group=Path(item['file']).stem if item['kind']=='label' else item['name'],
@@ -394,6 +416,11 @@ def convert_airport(code, recipe, records, colors):
         if style_id == 'label.text.label.labels':
             props.pop('source_group', None)
         props.update(options)
+        if item.get('overlay_group_ids') is not None:
+            props['vsmr_group_ids'] = item['overlay_group_ids']
+        palettes = item.get('overlay_palettes', recipe.get('base_palettes'))
+        if palettes is not None:
+            props['geometry_palettes'] = palettes
         props = {k:v for k,v in props.items() if v is not None}
         features.append(dict(type='Feature', id=feature_id, properties=props, geometry=copy.deepcopy(item['geometry'])))
     doc['features'] = features
@@ -403,8 +430,8 @@ def convert_airport(code, recipe, records, colors):
 
 
 def validate(code, doc):
-    if doc.get('type') != 'FeatureCollection' or doc['metadata'].get('geometry_mode') != 'shared':
-        raise ValueError(code + ': expected a shared-geometry FeatureCollection')
+    if doc.get('type') != 'FeatureCollection' or doc['metadata'].get('geometry_mode') not in ('shared', 'palette_specific'):
+        raise ValueError(code + ': expected a supported FeatureCollection')
     ids = set()
     for feature in doc['features']:
         if feature['id'] in ids:
@@ -415,6 +442,37 @@ def validate(code, doc):
         for point in coordinates(feature['geometry']):
             if len(point) < 2 or not all(math.isfinite(v) for v in point[:2]) or not (-180 <= point[0] <= 180 and -90 <= point[1] <= 90):
                 raise ValueError(code + ': invalid coordinates')
+
+
+def with_gng_overlays(code, recipe, native_records):
+    records = list(native_records)
+    identifiers = {item['source_id'] for item in records}
+    for overlay in recipe.get('gng_overlays', []):
+        filename = overlay.get('file')
+        if not isinstance(filename, str) or Path(filename).name != filename or not filename.endswith('.txt'):
+            raise ValueError(code + ': invalid GNG overlay filename')
+        location = ROOT / 'Settings' / 'GNG' / code / filename
+        style_id = overlay.get('style')
+        groups = overlay.get('groups', [])
+        palettes = overlay.get('palettes')
+        if (style_id not in recipe['document']['styles'] or not isinstance(groups, list) or
+                any(not isinstance(group, str) for group in groups) or
+                not isinstance(palettes, list) or
+                any(palette not in ('dark', 'light', 'real') for palette in palettes) or
+                any(group not in {entry['id'] for entry in recipe['document'].get('vsmr_groups', [])} for group in groups)):
+            raise ValueError(code + ': invalid GNG overlay settings for ' + filename)
+        for item in parse_gng(str(location), location.read_bytes(), allow_holes=True):
+            item['overlay_style_id'] = style_id
+            item['overlay_group_ids'] = groups
+            item['overlay_palettes'] = palettes
+            base = code + '-' + hashlib.sha256(packed(item)).hexdigest()[:20]
+            identifier, suffix = base, 1
+            while identifier in identifiers:
+                identifier, suffix = base + '-' + str(suffix), suffix + 1
+            identifiers.add(identifier)
+            item['source_id'] = identifier
+            records.append(item)
+    return records
 
 
 def enable_color():
@@ -518,7 +576,8 @@ def run(source_path=None, output=None, source_mode='local'):
         recipe = saved['recipes'].get(code)
         if recipe is None:
             recipe = dict(document=dict(type='FeatureCollection', name=code + ' AVISO', bbox=[], metadata=dict(schema='vSMR AVISO', schema_version=2, geometry_mode='shared', airport=code, coordinate_reference_system='WGS84', coordinate_order='longitude, latitude', default_color_palette='light', color_palettes=['dark','light'], background_colors={'dark':source['colors']['BACKGROUND_COLOR'],'light':source['colors']['BACKGROUND_COLOR']}), styles={}, vsmr_groups=[]), overrides={})
-        doc = convert_airport(code, recipe, source['airports'][code], source['colors'])
+        records = with_gng_overlays(code, recipe, source['airports'][code])
+        doc = convert_airport(code, recipe, records, source['colors'])
         update_counts(doc)
         doc['metadata'].update(geometry_source='vaccfr/France-Ground-Layouts' if source_mode == 'github' else 'local GNG', geometry_source_url='https://github.com/vaccfr/France-Ground-Layouts' if source_mode == 'github' else '', geometry_license='GPL-3.0')
         validate(code, doc)

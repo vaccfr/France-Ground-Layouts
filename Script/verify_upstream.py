@@ -19,7 +19,8 @@ def main():
         new = copy.deepcopy(changed['recipes'][code]['document'])
         for key, style in old['styles'].items():
             for prop in ('text-color', 'text-halo-color'):
-                if prop in style['paint']:
+                control = 'TEXT_COLOR' if prop == 'text-color' else 'TEXT_HALO_COLOR'
+                if style['paint'].get(prop) == colors[control]:
                     assert new['styles'][key]['paint'][prop] == ('#123456' if prop == 'text-color' else '#654321')
                     new['styles'][key]['paint'][prop] = style['paint'][prop]
         assert new == old, 'Text controls changed non-text rendering: ' + code

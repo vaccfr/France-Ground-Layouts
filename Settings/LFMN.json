@@ -383,7 +383,56 @@
         "text-anchor": "center",
         "zoomLevel": 7
       }
+    },
+    "line.closurearea.restrictions": {
+      "name": "Aircraft restrictions",
+      "layer": "Aircraft restrictions",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_37",
+        "stroke-width": 1.2,
+        "stroke-opacity": 1
+      }
     }
   },
-  "vsmr_groups": []
+  "vsmr_groups": [
+    {
+      "id": "wb-a380",
+      "name": "A380",
+      "folder": "Restrictions",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36"
+    },
+    {
+      "id": "wb-b748",
+      "name": "B747-8",
+      "folder": "Restrictions",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36"
+    },
+    {
+      "id": "wb-b744",
+      "name": "B747-400",
+      "folder": "Restrictions",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36"
+    }
+  ],
+  "features": {
+    "file:LFMN Restrictions A380": {
+      "vsmr_group_ids": [
+        "wb-a380"
+      ]
+    },
+    "file:LFMN Restrictions B748": {
+      "vsmr_group_ids": [
+        "wb-b748"
+      ]
+    },
+    "file:LFMN Restrictions B744": {
+      "vsmr_group_ids": [
+        "wb-b744"
+      ]
+    }
+  }
 }
