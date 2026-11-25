@@ -117,6 +117,10 @@ def main():
             output = json.loads(actual_files[code + '.geojson'])
             expected_records = c.with_gng_overlays(code, default_settings['recipes'].get(code, {}), records)
             assert geometry_counts(output['features']) == geometry_counts(expected_records), code
+            if code == 'LFPG':
+                assert all(item['file'].startswith('Settings/GNG/LFPG/') and
+                           not Path(item['file']).is_absolute()
+                           for item in expected_records[len(records):])
             assert collections.Counter((r['name'], c.packed(r['geometry'])) for r in records if r['kind'] == 'label') == collections.Counter((r['name'], c.packed(r['geometry'])) for r in native[code] if r['kind'] == 'label'), code
             used = {g for f in output['features'] for g in f['properties']['vsmr_group_ids']}
             assert {g['id'] for g in output['vsmr_groups']} == used

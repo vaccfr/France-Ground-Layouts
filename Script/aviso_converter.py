@@ -461,7 +461,8 @@ def with_gng_overlays(code, recipe, native_records):
                 any(palette not in ('dark', 'light', 'real') for palette in palettes) or
                 any(group not in {entry['id'] for entry in recipe['document'].get('vsmr_groups', [])} for group in groups)):
             raise ValueError(code + ': invalid GNG overlay settings for ' + filename)
-        for item in parse_gng(str(location), location.read_bytes(), allow_holes=True):
+        relative_file = 'Settings/GNG/' + code + '/' + filename
+        for item in parse_gng(relative_file, location.read_bytes(), allow_holes=True):
             item['overlay_style_id'] = style_id
             item['overlay_group_ids'] = groups
             item['overlay_palettes'] = palettes
