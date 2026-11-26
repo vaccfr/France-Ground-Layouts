@@ -4,7 +4,7 @@
   "metadata": {
     "schema": "vSMR AVISO",
     "schema_version": 2,
-    "geometry_mode": "shared",
+    "geometry_mode": "palette_specific",
     "airport": "LFPG",
     "coordinate_reference_system": "WGS84",
     "coordinate_order": "longitude, latitude",
@@ -155,7 +155,7 @@
             "fill": "COLOR_HardSurface4"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_HARDSURFACE4"
+            "fill": "REAL_LFPG_POLYGON_HARDSURFACE3"
           }
         }
       }
@@ -172,7 +172,7 @@
             "fill": "LIGHT_LFPG_POLYGON_TERRAIN1"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_TERRAIN1"
+            "fill": "DARK_POLYGON_TERRAIN1"
           }
         }
       }
@@ -223,7 +223,7 @@
             "fill": "COLOR_RunwayConcrete"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_RUNWAYCONCRETE"
+            "fill": "REAL_LFPG_LINE_TAXIWAYBLUE"
           }
         }
       }
@@ -240,7 +240,7 @@
             "fill": "COLOR_RunwayGrass"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_RUNWAYGRASS"
+            "fill": "REAL_LFPG_POLYGON_GRASSURFACE"
           }
         }
       }
@@ -257,7 +257,7 @@
             "fill": "COLOR_Building"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_BUILDING"
+            "fill": "LIGHT_LFML_POLYGON_TERRAIN9"
           }
         }
       }
@@ -274,7 +274,7 @@
             "fill": "LIGHT_LFPG_POLYGON_STOPBAR"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_STOPBAR"
+            "fill": "DARK_LFPO_POLYGON_TERRAIN4"
           }
         }
       }
@@ -291,7 +291,7 @@
             "fill": "COLOR_TaxiwayOrange"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_TAXIWAYORANGE"
+            "fill": "LIGHT_LFML_POLYGON_LANDMARK5"
           }
         }
       }
@@ -308,7 +308,7 @@
             "fill": "COLOR_ClosureArea"
           },
           "real": {
-            "fill": "REAL_LFPG_POLYGON_CLOSUREAREA"
+            "fill": "DARK_POLYGON_CLOSUREAREA"
           }
         }
       }
@@ -362,7 +362,7 @@
             "stroke": "COLOR_TaxiwayOrange"
           },
           "real": {
-            "stroke": "REAL_LFPG_LINE_TAXIWAYORANGE"
+            "stroke": "LIGHT_LFML_POLYGON_LANDMARK5"
           }
         }
       }
@@ -380,7 +380,7 @@
             "stroke": "COLOR_Taxiway"
           },
           "real": {
-            "stroke": "REAL_LFPG_LINE_TAXIWAY"
+            "stroke": "REAL_LFPG_LINE_TAXIWAY_STANDS"
           }
         }
       }
@@ -473,20 +473,1057 @@
         "stroke-opacity": 1,
         "stroke-width": 1.5
       }
+    },
+    "line.lvp2.ils-yellow-hatch": {
+      "paint": {
+        "stroke": "DARK_LINE_CENTERLINES",
+        "stroke-opacity": 0.5,
+        "stroke-width": 0.95
+      },
+      "layer": "LVP · Linework",
+      "name": "Aire critique toutes finales — hachures jaunes",
+      "object_type": "Line"
+    },
+    "line.lvp2.ils-yellow-outline": {
+      "paint": {
+        "stroke": "DARK_LINE_CENTERLINES",
+        "stroke-opacity": 0.5,
+        "stroke-width": 1.1
+      },
+      "layer": "LVP · Linework",
+      "name": "Aire critique toutes finales — bord jaune",
+      "object_type": "Line"
+    },
+    "line.lvp2.loc-marker": {
+      "paint": {
+        "stroke": "DARK_LINE_TAXIWAYGREY",
+        "stroke-opacity": 0.5,
+        "stroke-width": 1.8
+      },
+      "layer": "LVP · Linework",
+      "name": "Repère LOC — barre grise",
+      "object_type": "Line"
+    },
+    "line.lvp2.recat-ghk": {
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_13",
+        "stroke-opacity": 0.5,
+        "stroke-width": 1.65
+      },
+      "layer": "LVP · Linework",
+      "name": "Aire critique RECAT G/H/K — pointillés blancs",
+      "object_type": "Line"
+    },
+    "line.lvp2.recat-s": {
+      "paint": {
+        "stroke": "DARK_POLYGON_CLOSUREAREA",
+        "stroke-opacity": 0.5,
+        "stroke-width": 1.5
+      },
+      "layer": "LVP · Linework",
+      "name": "Aire critique RECAT S — pointillés rouges",
+      "object_type": "Line"
+    },
+    "polygon.lvp5.hp-cat1-cat3": {
+      "paint": {
+        "fill": "REAL_LFPG_V3_COLOR_14",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "dark": {
+            "fill": "REAL_LFPG_V3_COLOR_14"
+          },
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_14",
+            "stroke": "none"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_15",
+            "stroke": "none"
+          }
+        },
+        "stroke": "none"
+      },
+      "layer": "LVP · Filled areas",
+      "name": "HP CAT I / CAT III — ocre plein, chaussée détourée",
+      "object_type": "Area"
+    },
+    "real-polygon.grassurface.00512f": {
+      "name": "Grass",
+      "layer": "Terrain",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_GRASSURFACE3",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_17"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_17"
+          }
+        }
+      }
+    },
+    "real-polygon.hardsurface4.969393": {
+      "name": "Hard Surface 4",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_HARDSURFACE1",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_19"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_19"
+          }
+        }
+      }
+    },
+    "real-polygon.hardsurface3.8a807f": {
+      "name": "Hard Surface 3",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LFPO_POLYGON_PARKPOS",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_19"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_19"
+          }
+        }
+      }
+    },
+    "real-polygon.hardsurface2.595e5b": {
+      "name": "Hard Surface 2",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_HARDSURFACE2",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_22"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_22"
+          }
+        }
+      }
+    },
+    "real-polygon.runwayconcrete.555555": {
+      "name": "Runways",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LINE_RUNWAYCONCRETE",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_24"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_24"
+          }
+        }
+      }
+    },
+    "real-polygon.runwaygrass.008000": {
+      "name": "Grass runways",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LINE_RUNWAYGRASS",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_17"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_17"
+          }
+        }
+      }
+    },
+    "real-polygon.building.394446": {
+      "name": "Buildings",
+      "layer": "Buildings and structures",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_BUILDING2",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_27",
+            "stroke": "REAL_LFPG_V3_COLOR_28",
+            "stroke-width": 0.7
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_27",
+            "stroke": "REAL_LFPG_V3_COLOR_28",
+            "stroke-width": 0.7
+          }
+        },
+        "polygon-outline": true,
+        "stroke-width": 0.7,
+        "stroke": "REAL_LFPG_V3_COLOR_29",
+        "stroke-opacity": 1
+      }
+    },
+    "real-polygon.stopbar.7e0000": {
+      "name": "Stopbars",
+      "layer": "Surface markings",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_LFPO_POLYGON_TERRAIN4",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_30"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_30"
+          }
+        }
+      }
+    },
+    "real-polygon.taxiwayorange.cc6d00": {
+      "name": "Taxiway Orange",
+      "layer": "Airfield surfaces",
+      "object_type": "Area",
+      "paint": {
+        "fill": "REAL_LFPG_V3_COLOR_31",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_31"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_31"
+          }
+        }
+      }
+    },
+    "real-polygon.closurearea.ff0000": {
+      "name": "Closure areas",
+      "layer": "Operational restrictions",
+      "object_type": "Area",
+      "paint": {
+        "fill": "DARK_POLYGON_CLOSUREAREA",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_30"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_30"
+          }
+        }
+      }
+    },
+    "real-line.taxiway.c0b631.stands": {
+      "name": "Stand lines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LINE_HARDSURFACE5",
+        "stroke-opacity": 1,
+        "stroke-width": 1,
+        "palette-overrides": {
+          "light": {
+            "stroke": "LIGHT_LFML_LINE_HARDSURFACE5"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_LINE_TAXIWAY_STANDS"
+          }
+        }
+      }
+    },
+    "real-line.ground_layout_arrows.centerline": {
+      "name": "Yellow taxi arrows",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_34",
+        "stroke-opacity": 1,
+        "stroke-width": 1.9,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_34"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_34"
+          }
+        }
+      }
+    },
+    "real-line.ground_layout_arrows.green": {
+      "name": "T1 green flow arrows",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "DARK_LINE_GROUND_LAYOUT_ARROWS_GREEN",
+        "stroke-opacity": 1,
+        "stroke-width": 1.8,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "DARK_LINE_GROUND_LAYOUT_ARROWS_GREEN"
+          },
+          "light": {
+            "stroke": "DARK_LINE_GROUND_LAYOUT_ARROWS_GREEN"
+          }
+        }
+      }
+    },
+    "real-line.lvp2.loc-marker": {
+      "paint": {
+        "stroke": "DARK_LINE_TAXIWAYGREY",
+        "stroke-opacity": 0.5,
+        "stroke-width": 1.8
+      },
+      "layer": "LVP · Linework",
+      "name": "LOC marker bar",
+      "object_type": "Line"
+    },
+    "real-polygon.lvp5.hp-cat1-cat3": {
+      "paint": {
+        "fill": "REAL_LFPG_V3_COLOR_31",
+        "fill-opacity": 1,
+        "palette-overrides": {
+          "dark": {
+            "fill": "REAL_LFPG_V3_COLOR_14"
+          },
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_31",
+            "stroke": "none"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_31",
+            "stroke": "none"
+          }
+        },
+        "stroke": "none"
+      },
+      "layer": "LVP · Filled areas",
+      "name": "CAT I/III hold fill",
+      "object_type": "Area"
+    },
+    "real-line.prohibited-turns": {
+      "name": "Prohibited turns",
+      "layer": "Prohibited turns",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_36",
+        "stroke-opacity": 1,
+        "stroke-width": 1.8,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_30"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_30"
+          }
+        }
+      }
+    },
+    "real-label.prohibited-turns-limits": {
+      "name": "Turn limit >36",
+      "layer": "Prohibited turns",
+      "object_type": "Label",
+      "paint": {
+        "text-color": "REAL_LFPG_V3_COLOR_38",
+        "text-font": "Arial",
+        "text-size": 11,
+        "text-halo-color": "REAL_LFPG_V3_COLOR_39",
+        "text-halo-width": 1.2,
+        "text-anchor": "center",
+        "zoomLevel": 0
+      }
+    },
+    "real-line.aviso.limit60": {
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_40",
+        "stroke-opacity": 1,
+        "stroke-width": 1.15,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_40"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_40"
+          }
+        }
+      },
+      "name": "60 m limits",
+      "layer": "Guidance lines"
+    },
+    "real-line.aviso.simple-axis": {
+      "name": "Single centerline",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_41",
+        "stroke-opacity": 1,
+        "stroke-width": 1.8,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_41"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_41"
+          }
+        }
+      }
+    },
+    "real-line.aviso.perimeter": {
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_42",
+        "stroke-opacity": 1,
+        "stroke-width": 1.15,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_13"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_42"
+          }
+        }
+      },
+      "name": "Airport boundary",
+      "layer": "Terrain boundary"
+    },
+    "real-line.aviso.red-hp": {
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_36",
+        "stroke-opacity": 1,
+        "stroke-width": 1.8,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_30"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_30"
+          }
+        }
+      },
+      "name": "Runway hold zones"
+    },
+    "real-line.apron.aviso": {
+      "name": "Apron boundaries",
+      "object_type": "Line",
+      "layer": "Airfield surfaces",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_43",
+        "stroke-width": 0.8,
+        "stroke-opacity": 1,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_43",
+            "stroke-width": 0.8
+          },
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_43",
+            "stroke-width": 0.8
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_43",
+            "stroke-width": 0.8
+          }
+        }
+      }
+    },
+    "real-line.aviso.rimcas-lvp": {
+      "name": "RIMCAS LVP zones",
+      "layer": "AVISO overlays",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_44",
+        "stroke-width": 1.4,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.aviso.servitudes-yellow": {
+      "name": "Protection zones Y",
+      "layer": "AVISO overlays",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_45",
+        "stroke-width": 1.2,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.aviso.servitudes-green": {
+      "name": "Protection zones G",
+      "layer": "AVISO overlays",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_46",
+        "stroke-width": 1.1,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.aviso.one-nm": {
+      "name": "1 NM markers",
+      "layer": "AVISO overlays",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_45",
+        "stroke-width": 1.5,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.deicing.pad": {
+      "name": "Deicing pad",
+      "layer": "Deicing",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_47",
+        "stroke-width": 1.25,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.ice-shedding.envelope": {
+      "name": "Ice shedding bounds",
+      "layer": "Ice Shedding",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_48",
+        "stroke-opacity": 1,
+        "stroke-width": 1.25
+      }
+    },
+    "real-line.ice-shedding.head": {
+      "name": "Ice shedding marker",
+      "layer": "Ice Shedding",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_49",
+        "stroke-opacity": 1,
+        "stroke-width": 1.5
+      }
+    },
+    "real-line.aviso.double-axis.blue": {
+      "name": "Blue centerlines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_50",
+        "stroke-opacity": 1,
+        "stroke-width": 1.55,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_51"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_51"
+          }
+        }
+      }
+    },
+    "real-line.aviso.double-axis.orange": {
+      "name": "Orange centerlines",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_52",
+        "stroke-opacity": 1,
+        "stroke-width": 1.55,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "LIGHT_LFML_POLYGON_LANDMARK5"
+          },
+          "light": {
+            "stroke": "LIGHT_LFML_POLYGON_LANDMARK5"
+          }
+        }
+      }
+    },
+    "real-line.aviso.simple-axis.casing": {
+      "name": "Single axis contrast",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_53",
+        "stroke-opacity": 1,
+        "stroke-width": 2.65,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_53"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_53"
+          }
+        }
+      }
+    },
+    "real-line.ground_layout_arrows.casing": {
+      "name": "Taxi arrow contrast",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_54",
+        "stroke-opacity": 1,
+        "stroke-width": 3.2,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_54"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_54"
+          }
+        }
+      }
+    },
+    "real-line.ground_layout_arrows.red": {
+      "name": "T1 red flow arrows",
+      "layer": "Guidance lines",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_55",
+        "stroke-opacity": 1,
+        "stroke-width": 1.8,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_56"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_56"
+          }
+        }
+      }
+    },
+    "real-polygon.aviso.red-hp": {
+      "name": "Runway red areas",
+      "layer": "Runway holding areas",
+      "object_type": "Area",
+      "paint": {
+        "fill": "REAL_LFPG_V3_COLOR_57",
+        "fill-opacity": 1,
+        "stroke-width": 0,
+        "stroke-opacity": 0,
+        "zoomLevel": 0,
+        "palette-overrides": {
+          "dark": {
+            "fill": "REAL_LFPG_V3_COLOR_36"
+          },
+          "light": {
+            "fill": "REAL_LFPG_V3_COLOR_57"
+          },
+          "real": {
+            "fill": "REAL_LFPG_V3_COLOR_57"
+          }
+        }
+      }
+    },
+    "line.restrictions.b744": {
+      "name": "B747-400 · contours rouges",
+      "layer": "Aircraft restrictions",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_37",
+        "stroke-opacity": 1,
+        "stroke-width": 2,
+        "palette-overrides": {
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          }
+        }
+      }
+    },
+    "line.restrictions.b748": {
+      "name": "B747-8 · contours rouges",
+      "layer": "Aircraft restrictions",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_37",
+        "stroke-opacity": 1,
+        "stroke-width": 2,
+        "palette-overrides": {
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          }
+        }
+      }
+    },
+    "line.restrictions.a380": {
+      "name": "A380 · contours rouges",
+      "layer": "Aircraft restrictions",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_37",
+        "stroke-opacity": 1,
+        "stroke-width": 2,
+        "palette-overrides": {
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          }
+        }
+      }
+    },
+    "line.restrictions.b744-lateral-axes": {
+      "name": "B747-400 · axes latéraux interdits",
+      "layer": "Aircraft restrictions",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_37",
+        "stroke-opacity": 1,
+        "stroke-width": 1.2,
+        "palette-overrides": {
+          "dark": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "light": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          },
+          "real": {
+            "stroke": "REAL_LFPG_V3_COLOR_37"
+          }
+        }
+      }
+    },
+    "real-line.aviso.critical-s": {
+      "name": "RECAT-S area",
+      "layer": "AVISO critical areas",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_58",
+        "stroke-width": 1.35,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.aviso.critical-ghk": {
+      "name": "RECAT-GHK area",
+      "layer": "AVISO critical areas",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_59",
+        "stroke-width": 1.45,
+        "stroke-opacity": 1
+      }
+    },
+    "real-line.aviso.critical-yellow": {
+      "name": "ILS critical area",
+      "layer": "AVISO critical areas",
+      "object_type": "Line",
+      "paint": {
+        "stroke": "REAL_LFPG_V3_COLOR_60",
+        "stroke-width": 1,
+        "stroke-opacity": 1
+      }
     }
   },
   "vsmr_groups": [
     {
       "id": "ground-layout-east",
-      "name": "East Arrows",
+      "name": "East arrows",
       "visible": true,
-      "accent": "DARK_VSMR_GROUPS_ACCENT"
+      "accent": "DARK_VSMR_GROUPS_ACCENT",
+      "folder": "Guidance"
     },
     {
       "id": "ground-layout-west",
-      "name": "West Arrows",
+      "name": "West arrows",
       "visible": true,
-      "accent": "DARK_VSMR_GROUPS_ACCENT"
+      "accent": "DARK_VSMR_GROUPS_ACCENT",
+      "folder": "Guidance"
+    },
+    {
+      "accent": "DARK_LINE_TAXIWAYGREY",
+      "id": "lvp-loc-markers",
+      "name": "LOC markers",
+      "visible": true,
+      "folder": "Runways and LVP"
+    },
+    {
+      "accent": "REAL_LFPG_V3_COLOR_14",
+      "id": "lvp-hp-cat1-cat3",
+      "name": "CAT I / CAT III holding points",
+      "visible": true,
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "base-terrain",
+      "name": "Terrain",
+      "visible": true,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "base-runways",
+      "name": "Runways",
+      "visible": true,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "base-taxiways",
+      "name": "Taxiways",
+      "visible": true,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "base-aprons",
+      "name": "Aprons",
+      "visible": true,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "base-buildings",
+      "name": "Buildings",
+      "visible": true,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "airport-perimeter",
+      "name": "Airport boundary",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_42",
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "simple-axis",
+      "name": "Single centreline",
+      "visible": true,
+      "accent": "REAL_LFPG_V3_COLOR_41",
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "double-axis",
+      "name": "Dual centrelines",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_51",
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "display-stands",
+      "name": "Stand lines",
+      "visible": false,
+      "folder": "Guidance"
+    },
+    {
+      "id": "wb-a380",
+      "name": "A380",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36",
+      "folder": "Restrictions"
+    },
+    {
+      "id": "wb-b748",
+      "name": "B747-8",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36",
+      "folder": "Restrictions"
+    },
+    {
+      "id": "wb-b744",
+      "name": "B747-400",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36",
+      "folder": "Restrictions"
+    },
+    {
+      "id": "display-prohibited-turns",
+      "name": "Prohibited turns",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_36",
+      "folder": "Restrictions"
+    },
+    {
+      "id": "runway-red-zones",
+      "name": "Runway red zones",
+      "visible": true,
+      "accent": "REAL_LFPG_V3_COLOR_36",
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "limit-60-east",
+      "name": "60 m limits east",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_40",
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "limit-60-west",
+      "name": "60 m limits west",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_40",
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "display-gates",
+      "name": "Gate / stand names",
+      "visible": false,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "display-taxiway-names",
+      "name": "Taxiway names",
+      "visible": false,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "labels-terminals",
+      "name": "Building names",
+      "visible": false,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "labels-runways",
+      "name": "Runway names",
+      "visible": true,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "labels-fixed",
+      "name": "Fixed labels",
+      "visible": false,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "labels-tora",
+      "name": "TORA distances",
+      "visible": false,
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "apron-boundaries",
+      "name": "Apron boundaries",
+      "visible": false,
+      "folder": "Base map",
+      "geometry_palettes": [
+        "real"
+      ]
+    },
+    {
+      "id": "aviso-rimcas-lvp",
+      "name": "RIMCAS LVP",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_44",
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "aviso-servitudes",
+      "name": "Safeguarding zones",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_45",
+      "folder": "Runways and LVP"
+    },
+    {
+      "id": "aviso-one-nm",
+      "name": "1 NM markers",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_45",
+      "folder": "Labels and markers"
+    },
+    {
+      "id": "deicing-east",
+      "name": "Deicing east",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_47",
+      "folder": "Winter operations"
+    },
+    {
+      "id": "deicing-west",
+      "name": "Deicing west",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_47",
+      "folder": "Winter operations"
+    },
+    {
+      "id": "ice-shedding-east",
+      "name": "Ice shedding east",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_62",
+      "folder": "Winter operations"
+    },
+    {
+      "id": "ice-shedding-west",
+      "name": "Ice shedding west",
+      "visible": false,
+      "accent": "REAL_LFPG_V3_COLOR_49",
+      "folder": "Winter operations"
+    },
+    {
+      "id": "labels-holding-points",
+      "name": "Holding points",
+      "folder": "Labels and markers",
+      "visible": true
+    },
+    {
+      "accent": "DARK_POLYGON_CLOSUREAREA",
+      "id": "lvp-critical-east",
+      "name": "Critical areas East",
+      "visible": true,
+      "folder": "Runways and LVP"
+    },
+    {
+      "accent": "REAL_LFPG_V3_COLOR_13",
+      "id": "lvp-critical-west",
+      "name": "Critical areas West",
+      "visible": true,
+      "folder": "Runways and LVP"
     }
   ],
   "features": {
@@ -500,5 +1537,700 @@
         "ground-layout-west"
       ]
     }
-  }
+  },
+  "base_palettes": [
+    "dark",
+    "light"
+  ],
+  "gng_overlays": [
+    {
+      "file": "LFPG Real v3 001.txt",
+      "style": "real-polygon.grassurface.00512f",
+      "groups": [
+        "base-terrain"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 002.txt",
+      "style": "real-polygon.hardsurface4.969393",
+      "groups": [
+        "base-aprons"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 003.txt",
+      "style": "real-polygon.hardsurface3.8a807f",
+      "groups": [
+        "base-aprons"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 004.txt",
+      "style": "real-polygon.hardsurface2.595e5b",
+      "groups": [
+        "base-taxiways"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 005.txt",
+      "style": "real-polygon.runwayconcrete.555555",
+      "groups": [
+        "base-runways"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 006.txt",
+      "style": "real-polygon.runwaygrass.008000",
+      "groups": [
+        "base-runways"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 007.txt",
+      "style": "real-polygon.building.394446",
+      "groups": [
+        "base-buildings"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 008.txt",
+      "style": "real-polygon.aviso.red-hp",
+      "groups": [
+        "runway-red-zones"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 009.txt",
+      "style": "line.restrictions.b744",
+      "groups": [
+        "wb-b744"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 010.txt",
+      "style": "line.restrictions.b748",
+      "groups": [
+        "wb-b748"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 011.txt",
+      "style": "line.restrictions.a380",
+      "groups": [
+        "wb-a380"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 012.txt",
+      "style": "line.restrictions.b744-lateral-axes",
+      "groups": [
+        "wb-b744"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 013.txt",
+      "style": "real-line.aviso.perimeter",
+      "groups": [
+        "airport-perimeter"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 014.txt",
+      "style": "real-line.apron.aviso",
+      "groups": [
+        "apron-boundaries"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 015.txt",
+      "style": "real-line.taxiway.c0b631.stands",
+      "groups": [
+        "display-stands"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 016.txt",
+      "style": "real-line.aviso.double-axis.blue",
+      "groups": [
+        "double-axis"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 017.txt",
+      "style": "real-line.aviso.double-axis.orange",
+      "groups": [
+        "double-axis"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 018.txt",
+      "style": "real-line.aviso.simple-axis.casing",
+      "groups": [
+        "simple-axis"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 019.txt",
+      "style": "real-line.aviso.simple-axis",
+      "groups": [
+        "simple-axis"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 020.txt",
+      "style": "real-line.ground_layout_arrows.casing",
+      "groups": [
+        "ground-layout-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 021.txt",
+      "style": "real-line.ground_layout_arrows.centerline",
+      "groups": [
+        "ground-layout-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 022.txt",
+      "style": "real-line.ground_layout_arrows.green",
+      "groups": [
+        "ground-layout-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 023.txt",
+      "style": "real-line.ground_layout_arrows.red",
+      "groups": [
+        "ground-layout-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 024.txt",
+      "style": "real-line.ground_layout_arrows.casing",
+      "groups": [
+        "ground-layout-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 025.txt",
+      "style": "real-line.ground_layout_arrows.centerline",
+      "groups": [
+        "ground-layout-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 026.txt",
+      "style": "real-line.ground_layout_arrows.green",
+      "groups": [
+        "ground-layout-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 027.txt",
+      "style": "real-line.ground_layout_arrows.red",
+      "groups": [
+        "ground-layout-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 028.txt",
+      "style": "real-polygon.taxiwayorange.cc6d00",
+      "groups": [
+        "lvp-hp-cat1-cat3"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 029.txt",
+      "style": "real-polygon.lvp5.hp-cat1-cat3",
+      "groups": [
+        "lvp-hp-cat1-cat3"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 030.txt",
+      "style": "real-polygon.stopbar.7e0000",
+      "groups": [
+        "runway-red-zones"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 031.txt",
+      "style": "real-polygon.closurearea.ff0000",
+      "groups": [
+        "runway-red-zones"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 032.txt",
+      "style": "real-line.aviso.limit60",
+      "groups": [
+        "limit-60-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 033.txt",
+      "style": "real-line.aviso.limit60",
+      "groups": [
+        "limit-60-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 034.txt",
+      "style": "real-line.lvp2.loc-marker",
+      "groups": [
+        "lvp-loc-markers"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 035.txt",
+      "style": "real-line.aviso.rimcas-lvp",
+      "groups": [
+        "aviso-rimcas-lvp"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 036.txt",
+      "style": "real-line.aviso.servitudes-green",
+      "groups": [
+        "aviso-servitudes"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 037.txt",
+      "style": "real-line.aviso.servitudes-yellow",
+      "groups": [
+        "aviso-servitudes"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 038.txt",
+      "style": "real-line.aviso.one-nm",
+      "groups": [
+        "aviso-one-nm"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 039.txt",
+      "style": "real-line.deicing.pad",
+      "groups": [
+        "deicing-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 040.txt",
+      "style": "real-line.deicing.pad",
+      "groups": [
+        "deicing-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 041.txt",
+      "style": "real-line.deicing.pad",
+      "groups": [
+        "deicing-east",
+        "deicing-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 042.txt",
+      "style": "real-line.ice-shedding.envelope",
+      "groups": [
+        "ice-shedding-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 043.txt",
+      "style": "real-line.ice-shedding.head",
+      "groups": [
+        "ice-shedding-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 044.txt",
+      "style": "real-line.ice-shedding.envelope",
+      "groups": [
+        "ice-shedding-east",
+        "ice-shedding-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 045.txt",
+      "style": "real-line.ice-shedding.head",
+      "groups": [
+        "ice-shedding-east",
+        "ice-shedding-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 046.txt",
+      "style": "real-line.ice-shedding.envelope",
+      "groups": [
+        "ice-shedding-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 047.txt",
+      "style": "real-line.ice-shedding.head",
+      "groups": [
+        "ice-shedding-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 048.txt",
+      "style": "real-line.prohibited-turns",
+      "groups": [
+        "display-prohibited-turns"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 049.txt",
+      "style": "real-label.prohibited-turns-limits",
+      "groups": [
+        "display-prohibited-turns"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 050.txt",
+      "style": "label.engine-test-area",
+      "groups": [
+        "labels-fixed"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 051.txt",
+      "style": "label.gates",
+      "groups": [
+        "display-gates"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 052.txt",
+      "style": "label.tora",
+      "groups": [
+        "labels-tora"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 053.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "labels-runways"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 054.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "display-taxiway-names"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 055.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "deicing-east",
+        "labels-fixed"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 056.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "deicing-west",
+        "labels-fixed"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 057.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "deicing-east",
+        "deicing-west",
+        "display-taxiway-names"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 058.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "deicing-east",
+        "display-taxiway-names"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 059.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "deicing-west",
+        "display-taxiway-names"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 060.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "labels-fixed"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 061.txt",
+      "style": "label.terminaux",
+      "groups": [
+        "labels-terminals"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 062.txt",
+      "style": "label.taxiways",
+      "groups": [
+        "labels-holding-points"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 063.txt",
+      "style": "real-line.aviso.critical-s",
+      "groups": [
+        "lvp-critical-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 064.txt",
+      "style": "real-line.aviso.critical-ghk",
+      "groups": [
+        "lvp-critical-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 065.txt",
+      "style": "real-line.aviso.critical-yellow",
+      "groups": [
+        "lvp-critical-east"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 066.txt",
+      "style": "real-line.aviso.critical-s",
+      "groups": [
+        "lvp-critical-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 067.txt",
+      "style": "real-line.aviso.critical-ghk",
+      "groups": [
+        "lvp-critical-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    },
+    {
+      "file": "LFPG Real v3 068.txt",
+      "style": "real-line.aviso.critical-yellow",
+      "groups": [
+        "lvp-critical-west"
+      ],
+      "palettes": [
+        "real"
+      ]
+    }
+  ]
 }

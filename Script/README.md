@@ -22,21 +22,25 @@ An explicit source selection overwrites the existing GeoJSON output; official
 source may contain different airports and geometry from a customized checkout.
 No reports, summaries or cached downloads are generated.
 
-Settings/ is the only place for editable vSMR customization: palettes,
+Settings/ is the place for editable vSMR customization: palettes,
 backgrounds, groups, zoom levels and runway settings. Settings/Colours.sct
 contains palette additions/overrides; the pack's root Colours.sct stays intact.
 Colors in Settings take precedence over the selected pack's native definitions.
+LFPG Real v3 uses GNG overlays under Settings/GNG/LFPG and a palette-specific
+geometry mode. Its native GNG geometry remains the Light/Dark source. LFMN's
+restriction outlines are native GNG files assigned to optional groups.
 
-## Official sources are read-only
+## Native source handling
 
 GNG/, KMZ/ and root Colours.sct are based on the official pack at
 [vaccfr commit ed923f4](https://github.com/vaccfr/France-Ground-Layouts/commit/ed923f4b8ce11bbf1a0998597fd46595287b4d4c).
-All native source files remain unchanged. The LFPO background rectangle removal
+The LFPO background rectangle removal
 was already merged upstream in PR #196. LFPO's Real background is configured
 as #6C6A68 in Settings/Colours.sct.
 
-Do not reformat coordinates, remove content, rename or reorganize native files,
-or rebuild KMZ archives. Update sources only from the official pack.
+Do not reformat coordinates, remove content, rename or reorganize existing
+native files, or rebuild KMZ archives. New airport geometry may be added as
+new GNG files, while existing pack files stay intact.
 
 The converter reads all geometry and text exclusively from GNG. KMZ files
 remain in the repository for the upstream workflow, but are neither required,
@@ -49,7 +53,7 @@ Optional group assignments use `file:<GNG filename without extension>` or an
 exact feature ID. Groups with no assigned output feature are hidden; objects
 available only in KMZ are not imported.
 Conversion writes only GeoJSON; source/settings directories are rejected as
-output destinations. All changes to appearance belong in Settings/.
+output destinations. Palette appearance belongs in Settings/.
 
 ## Verification
 

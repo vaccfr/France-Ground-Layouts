@@ -1,10 +1,12 @@
 # AVISO runtime settings
 
-Airport settings are flat files: `Settings/LFPG.json`, `Settings/LFPO.json`,
-etc. There are no per-airport folders or separate feature files.
+Airport settings use flat JSON files such as `Settings/LFPG.json` and
+`Settings/LFPO.json`. LFPG Real v3 also has GNG geometry overlays in
+`Settings/GNG/LFPG/`.
 
 - <ICAO>.json: styles, groups, backgrounds, zoom levels and runway settings.
 - Optional `features` inside <ICAO>.json: toggle-group assignments keyed by feature IDs or `file:<GNG filename without extension>`.
+- Optional `gng_overlays`: GNG files for a selected palette, style and group set. `base_palettes` limits native GNG geometry to the remaining palettes.
 - common.json: reusable runtime settings referenced with {"$ref": "name"}.
 
 Editable colors are named definitions in `Colours.sct` in this folder, layered over
@@ -33,12 +35,19 @@ The optional `features` object inside each airport JSON contains only group assi
 }
 ```
 
-Only LFPG currently needs the `features` object, for optional East/West arrow GNG files. Empty groups are hidden. Other
+LFPG uses the `features` object for optional East/West arrow GNG files. LFMN
+uses it for the A380, B747-8 and B747-400 restriction GNG files. Empty groups are hidden. Other
 features need no entries. Styles are inferred from native color names, geometry
 kind and label file categories. Geometry roles follow the selected style;
 no per-feature style or rendering overrides are stored or accepted.
 
-GNG, KMZ and native Colours.sct remain unchanged from the official pack.
+For LFPG Real v3, each `gng_overlays` entry names a file in
+`Settings/GNG/LFPG/`, its style, groups and `real` palette. These files use
+the same coordinate, line and label format as native GNG. `// HOLE` separates
+polygon rings so courtyard and apron cutouts stay open. Native LFPG geometry
+remains available for Light and Dark. LFMN restriction outlines live in its
+native GNG directory and are hidden by default through their group settings.
+
 Make appearance changes here, not in the native source files. Geometry and labels are read exclusively from GNG; KMZ files are ignored. Keep IDs stable only for
 features explicitly assigned to toggle groups. Ordinary feature IDs are an
 output detail, not a mapping that needs manual maintenance. Official GitHub

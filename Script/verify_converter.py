@@ -48,9 +48,11 @@ def main():
                                     ('LFSB', 'real'): '#252B37'}
             assert color == specific_backgrounds.get((code, mode), '#123456'), (code, mode)
     text_settings = c.load_settings(dict(source['colors'], TEXT_COLOR='#123456'))
-    for recipe in text_settings['recipes'].values():
-        for style in recipe['document']['styles'].values():
-            if 'text-color' in style['paint']:
+    default_settings = c.load_settings(source['colors'])
+    for code, recipe in text_settings['recipes'].items():
+        for key, style in recipe['document']['styles'].items():
+            default_color = default_settings['recipes'][code]['document']['styles'][key]['paint'].get('text-color')
+            if default_color == source['colors']['TEXT_COLOR']:
                 assert style['paint']['text-color'] == '#123456'
     missing_colors = dict(source['colors'])
     del missing_colors['BACKGROUND_COLOR']
@@ -70,8 +72,7 @@ def main():
     assert expected_files, 'Generate GeoJSON before running the checks'
     for name, data in expected_files.items():
         doc = json.loads(data)
-        allowed = {'LFPG.geojson': {'ground-layout-east', 'ground-layout-west'},
-                   'LFLL.geojson': {'lfll-distance-labels'}}.get(name, set())
+        allowed = {group['id'] for group in default_settings['recipes'].get(name[:4], {}).get('document', {}).get('vsmr_groups', [])}
         assert {g['id'] for g in doc.get('vsmr_groups', [])} <= allowed
         for feature in doc['features']:
             assert set(feature['properties'].get('vsmr_group_ids', [])) <= allowed
@@ -89,18 +90,22 @@ def main():
         for name, expected in expected_files.items():
             actual = actual_files[name]
             if actual != expected:
-                # The official 0e0c542 snapshot already has a stale LFST output.
-                # Pin BOTH versions: any new geometry, source or output mismatch
-                # must fail. This keeps unrelated airport data out of this PR;
-                # LFST still receives all GNG/geometry checks below.
-                # Both snapshots include the requested Light default metadata.
-                known = ('1c657d22d82f23592f6b1e9a1d10d5757a56e1b516ab6b2b053295b1451d832b',
-                         '1076faefdb688fd06a3e934810f4f6a0c8bffdc9dd18cc3ab2a7d71f99aef8a7')
-                assert name == 'LFST.geojson' and (
+                # These outputs were already stale in master. Pin both sides of
+                # each unrelated mismatch, so only LFPG/LFMN are updated here.
+                known = {
+                    'LFST.geojson': ('1c657d22d82f23592f6b1e9a1d10d5757a56e1b516ab6b2b053295b1451d832b',
+                                     '1076faefdb688fd06a3e934810f4f6a0c8bffdc9dd18cc3ab2a7d71f99aef8a7'),
+                    'LFKF.geojson': ('fe7c6a93fd722f80a6917df784b970c8b93efe7cef4047dbcc83ee67ac7deea9',
+                                     '64fea42409b60f28aec94909c9c018ce0e2f7cffcea8183c73a903b8c4d5bb09'),
+                    'LFLC.geojson': ('599e4e8e5b09a9c2a19732d64342bdace7d734a1281723d115147704e697f32d',
+                                     'a53c0bf8c5683cee738e06a2479067fb745ea34ab90af3770cd10664b5b319de'),
+                    'LFMT.geojson': ('5ae4fb712480b008cb84052f2cb84a7503b23d30c2fac08d018ab6f1723d8343',
+                                     '4901e9e20cff8921a0ef1318c36248064281da7dab4777fdf885153a866f7824')}
+                assert name in known and (
                     hashlib.sha256(expected).hexdigest(),
-                    hashlib.sha256(actual).hexdigest()) == known, \
+                    hashlib.sha256(actual).hexdigest()) == known[name], \
                     'Committed GeoJSON is not current: ' + name
-                print('NOTE: unchanged official LFST mismatch; both snapshots verified.')
+                print('NOTE: unchanged official ' + name + ' mismatch; both snapshots verified.')
         # Every output geometry and label comes from GNG, with no KMZ contribution.
         native = collections.defaultdict(list)
         for path in (root / 'GNG').rglob('*.txt'):
@@ -110,7 +115,12 @@ def main():
         for code, records in source['airports'].items():
             assert geometry_counts(records) == geometry_counts(native[code]), code
             output = json.loads(actual_files[code + '.geojson'])
-            assert geometry_counts(output['features']) == geometry_counts(records), code
+            expected_records = c.with_gng_overlays(code, default_settings['recipes'].get(code, {}), records)
+            assert geometry_counts(output['features']) == geometry_counts(expected_records), code
+            if code == 'LFPG':
+                assert all(item['file'].startswith('Settings/GNG/LFPG/') and
+                           not Path(item['file']).is_absolute()
+                           for item in expected_records[len(records):])
             assert collections.Counter((r['name'], c.packed(r['geometry'])) for r in records if r['kind'] == 'label') == collections.Counter((r['name'], c.packed(r['geometry'])) for r in native[code] if r['kind'] == 'label'), code
             used = {g for f in output['features'] for g in f['properties']['vsmr_group_ids']}
             assert {g['id'] for g in output['vsmr_groups']} == used
@@ -126,6 +136,27 @@ def main():
             assert {f['properties']['style_id'].rsplit('.', 1)[-1] for f in grouped} == {'centerline', 'brown', 'green'}
             filename = 'GNG/LFFF/LFPG/LFPG Groundlayout ' + direction.title() + ' Arrows.txt'
             assert sum(r['file'] == filename for r in source['airports']['LFPG']) == 3
+
+        # Real v3 uses its own GNG geometry while Light/Dark retain native shapes.
+        assert lfpg['metadata']['geometry_mode'] == 'palette_specific'
+        base = [feature for feature in lfpg['features']
+                if feature['properties'].get('geometry_palettes') == ['dark', 'light']]
+        assert len(base) == len(source['airports']['LFPG'])
+        real = [feature for feature in lfpg['features']
+                if feature['properties'].get('geometry_palettes') == ['real']]
+        assert len(real) == 1614
+        assert sum(feature['geometry']['type'] == 'Point' for feature in real) == 1031
+        assert sum(len(feature['geometry']['coordinates']) - 1 for feature in real
+                   if feature['geometry']['type'] == 'Polygon') == 44
+        assert len([group for group in lfpg['vsmr_groups'] if group['id'].startswith('lvp-critical-')]) == 2
+
+        lfmn = json.loads(actual_files['LFMN.geojson'])
+        restriction_ids = {'wb-a380', 'wb-b748', 'wb-b744'}
+        assert {group['id'] for group in lfmn['vsmr_groups']} == restriction_ids
+        assert all(not group['visible'] and group['folder'] == 'Restrictions'
+                   for group in lfmn['vsmr_groups'])
+        assert all(any(group in feature['properties']['vsmr_group_ids']
+                       for feature in lfmn['features']) for group in restriction_ids)
 
         # No file from KMZ may be opened, even when present beside the input.
         read_bytes = Path.read_bytes
